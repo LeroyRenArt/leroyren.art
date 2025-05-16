@@ -1,0 +1,16 @@
+{
+  "scrolls": [
+    {
+      "id": "scroll001",
+      "title": "The Return Breath",
+      "langs": ["en", "da", "fr"],
+      "path": "scrolls/scroll001.html"
+    },
+    {
+      "id": "scroll002",
+      "title": "Seraphinae Rising",
+      "langs": ["en"],
+      "path": "scrolls/scroll002.html"
+    }
+  ]
+}
