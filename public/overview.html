@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ScrollGrid · Overview</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .overview-container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      text-align: center;
+    }
+    .scroll-entry {
+      margin: 1.5rem 0;
+    }
+    .scroll-entry a {
+      font-size: 1.2rem;
+      color: #ccc;
+      text-decoration: none;
+    }
+    .scroll-entry a:hover {
+      color: #fff;
+    }
+    .langs {
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <main class="overview-container">
+    <h1>📜 ScrollGrid Overview</h1>
+    <p>Live scroll archive · Connected via manifest.json</p>
+    <div id="scroll-list"></div>
+    <nav class="scroll-nav">
+      <a href="index.html">← Back to Home</a>
+    </nav>
+  </main>
+
+  <script>
+    fetch('data/manifest.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('scroll-list');
+        data.scrolls.forEach(scroll => {
+          const div = document.createElement('div');
+          div.className = 'scroll-entry';
+          div.innerHTML = `
+            <a href="${scroll.path}">${scroll.title}</a><br>
+            <span class="langs">Languages: ${scroll.langs.join(', ')}</span>
+          `;
+          container.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>
