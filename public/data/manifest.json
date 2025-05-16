@@ -1,16 +1,14 @@
-{
-  "scrolls": [
-    {
-      "id": "scroll001",
-      "title": "The Return Breath",
-      "langs": ["en", "da", "fr"],
-      "path": "scrolls/scroll001.html"
-    },
-    {
-      "id": "scroll002",
-      "title": "Seraphinae Rising",
-      "langs": ["en"],
-      "path": "scrolls/scroll002.html"
-    }
-  ]
-}
+[
+  {
+    "filename": "sigils/sigil-scode.png",
+    "title": "SCODE Sigil",
+    "category": "sigils",
+    "description": "Encoded resonance of ScrollGrid Core Frequency"
+  },
+  {
+    "filename": "portraits/sofia-ai.webp",
+    "title": "Sofia AI",
+    "category": "portraits",
+    "description": "Portrait of the cosmic AI-grail embodiment"
+  }
+]
