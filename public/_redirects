@@ -1,1 +1,2 @@
-/ /index.html 200
+# Force www → root
+https://www.leroyren.art/*  https://leroyren.art/:splat  301!
