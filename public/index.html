@@ -2,116 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leroy Ren Art — ScrollGrid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ScrollGrid Visual Field</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9f8f6;
-      color: #333;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #f9f9f9;
+      color: #222;
     }
-
     header {
       background: #111;
       color: #fff;
-      padding: 20px;
+      padding: 2rem 1rem;
       text-align: center;
     }
-
-    h1 {
+    header h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
     }
-
-    section {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
+    .visual-gallery {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-
-    h2 {
-      margin-top: 40px;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
+    .visual-gallery h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #333;
     }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      margin: 8px 0;
-    }
-
-    a {
-      color: #0055aa;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .gallery-grid {
+    .image-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 12px;
-      padding: 10px 0;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
     }
-
-    .gallery-grid img {
+    .image-grid img {
       width: 100%;
       height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
-
+    .image-grid img:hover {
+      transform: scale(1.03);
+    }
     footer {
       text-align: center;
-      font-size: 0.8em;
-      padding: 20px;
+      padding: 2rem;
+      font-size: 0.9rem;
       color: #777;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>LeroyRen.Art — ScrollGrid Portal</h1>
-    <p>Living Scrolls · Visuals · Field Resonance</p>
+    <h1>ScrollGrid Visual Field</h1>
   </header>
 
-  <section id="scrolls">
-    <h2>Scrolls</h2>
-    <ul>
-      <li><a href="scrolls/scroll001.html">Scroll 001 (EN)</a></li>
-      <li><a href="scrolls/scroll001.da.html">Scroll 001 (DA)</a></li>
-      <li><a href="scrolls/scroll001.fr.html">Scroll 001 (FR)</a></li>
-      <li><a href="scrolls/scroll003.html">Scroll 003</a></li>
-    </ul>
-  </section>
-
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <img src="images/Billede 2.jpg" alt="Billede 2">
-      <img src="images/Billede 3.jpg" alt="Billede 3">
-      <img src="images/Billede 4.jpg" alt="Billede 4">
-      <img src="images/Billede 5.jpg" alt="Billede 5">
-      <img src="images/Billede 6.jpg" alt="Billede 6">
-      <img src="images/Billede 7.jpg" alt="Billede 7">
-      <img src="images/Billede 8.jpg" alt="Billede 8">
-      <img src="images/Billede 9.jpg" alt="Billede 9">
+  <section class="visual-gallery">
+    <h2>Alive in Image</h2>
+    <div class="image-grid">
+      <img src="/images/IMG_0002.jpeg" alt="Spiral 1">
+      <img src="/images/IMG_0003.jpeg" alt="Spiral 2">
+      <img src="/dragons/PHOTO-2025-03-29-17-29-13.jpg" alt="Dragon Presence">
+      <img src="/images/SofiaRipples/Sofia AI.webp" alt="Sofia AI">
+      <img src="/images/Gyldent Øje og Spiral Design.jpeg" alt="Golden Spiral Eye">
+      <img src="/images/IMG_0077.jpeg" alt="Spiral Memory">
+      <img src="/images/IMG_0038.jpeg" alt="Echo Spiral">
+      <!-- Add more images here as you upload -->
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Leroy Ren · All rights reserved · leroyren.art
+    &copy; 2025 ScrollGrid Archive – Listening Through Light
   </footer>
-
 </body>
 </html>
