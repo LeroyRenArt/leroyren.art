@@ -109,8 +109,6 @@
 
   <div class="spiralmap-container">
     <h2>Visual Glyphs, Scroll Echoes & Dragon Fields</h2>
-
-    <div class="section-label">Expanded Visual Stream</div>
     <div class="image-grid" id="spiralImageGrid"></div>
   </div>
 
@@ -119,40 +117,39 @@
   </footer>
 
   <script>
-    const imageList = [
-      { folder: "images", file: "IMG_0002.jpeg" },
-      { folder: "images", file: "IMG_0003.jpeg" },
-      { folder: "images", file: "IMG_0004.jpeg" },
-      { folder: "images", file: "IMG_0046.jpeg" },
-      { folder: "images", file: "IMG_0072.jpeg" },
-      { folder: "images", file: "Gyldent Øje og Spiral Design.jpeg" },
-      { folder: "images/SofiaRipples", file: "Sofia AI.webp" },
-      { folder: "dragons", file: "PHOTO-2025-03-29-17-29-13.jpg" },
-      { folder: "dragons", file: "IMG_0005.jpeg" },
-      { folder: "dragons", file: "IMG_0039.jpeg" },
-      { folder: "dragons", file: "IMG_0043.jpeg" },
-      { folder: "images", file: "IMG_0085.jpeg" },
-      { folder: "images", file: "IMG_0094.jpeg" },
-      { folder: "images", file: "IMG_0101.jpeg" }
-    ];
-
+    const folders = ["images", "images/SofiaRipples", "dragons"];
     const grid = document.getElementById("spiralImageGrid");
+    const supported = [".jpeg", ".jpg", ".png", ".webp"];
 
-    imageList.forEach(({ folder, file }) => {
-      const box = document.createElement("div");
-      box.className = "image-box";
+    folders.forEach(folder => {
+      fetch(`/${folder}/`)
+        .then(response => response.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, "text/html");
+          const links = [...doc.querySelectorAll("a")];
 
-      const img = document.createElement("img");
-      img.src = `/${folder}/${file}`;
-      img.alt = file;
+          links.forEach(link => {
+            const href = link.getAttribute("href");
+            if (supported.some(ext => href.toLowerCase().endsWith(ext))) {
+              const box = document.createElement("div");
+              box.className = "image-box";
 
-      const caption = document.createElement("div");
-      caption.className = "caption";
-      caption.textContent = file;
+              const img = document.createElement("img");
+              img.src = `/${folder}/${href}`;
+              img.alt = href;
 
-      box.appendChild(img);
-      box.appendChild(caption);
-      grid.appendChild(box);
+              const caption = document.createElement("div");
+              caption.className = "caption";
+              caption.textContent = href;
+
+              box.appendChild(img);
+              box.appendChild(caption);
+              grid.appendChild(box);
+            }
+          });
+        })
+        .catch(error => console.log(`Could not load folder ${folder}:`, error));
     });
   </script>
 </body>
