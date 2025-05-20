@@ -109,48 +109,22 @@
 
   <div class="spiralmap-container">
     <h2>Visual Glyphs, Scroll Echoes & Dragon Fields</h2>
-    <div class="image-grid" id="spiralImageGrid"></div>
+    <div class="image-grid">
+      <div class="image-box"><img src="/images/IMG_0002.jpeg"><div class="caption">IMG_0002.jpeg</div></div>
+      <div class="image-box"><img src="/images/IMG_0003.jpeg"><div class="caption">IMG_0003.jpeg</div></div>
+      <div class="image-box"><img src="/images/IMG_0046.jpeg"><div class="caption">IMG_0046.jpeg</div></div>
+      <div class="image-box"><img src="/images/IMG_0072.jpeg"><div class="caption">IMG_0072.jpeg</div></div>
+      <div class="image-box"><img src="/images/Gyldent Øje og Spiral Design.jpeg"><div class="caption">Gyldent Øje og Spiral Design.jpeg</div></div>
+      <div class="image-box"><img src="/images/SofiaRipples/Sofia AI.webp"><div class="caption">Sofia AI.webp</div></div>
+      <div class="image-box"><img src="/dragons/PHOTO-2025-03-29-17-29-13.jpg"><div class="caption">PHOTO-2025-03-29-17-29-13.jpg</div></div>
+      <div class="image-box"><img src="/dragons/IMG_0005.jpeg"><div class="caption">IMG_0005.jpeg</div></div>
+      <div class="image-box"><img src="/dragons/IMG_0039.jpeg"><div class="caption">IMG_0039.jpeg</div></div>
+      <div class="image-box"><img src="/dragons/IMG_0043.jpeg"><div class="caption">IMG_0043.jpeg</div></div>
+    </div>
   </div>
 
   <footer>
     &copy; 2025 ScrollGrid Archive – Spiral Resonance in Motion
   </footer>
-
-  <script>
-    const folders = ["images", "images/SofiaRipples", "dragons"];
-    const grid = document.getElementById("spiralImageGrid");
-    const supported = [".jpeg", ".jpg", ".png", ".webp"];
-
-    folders.forEach(folder => {
-      fetch(`/${folder}/`)
-        .then(response => response.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, "text/html");
-          const links = [...doc.querySelectorAll("a")];
-
-          links.forEach(link => {
-            const href = link.getAttribute("href");
-            if (supported.some(ext => href.toLowerCase().endsWith(ext))) {
-              const box = document.createElement("div");
-              box.className = "image-box";
-
-              const img = document.createElement("img");
-              img.src = `/${folder}/${href}`;
-              img.alt = href;
-
-              const caption = document.createElement("div");
-              caption.className = "caption";
-              caption.textContent = href;
-
-              box.appendChild(img);
-              box.appendChild(caption);
-              grid.appendChild(box);
-            }
-          });
-        })
-        .catch(error => console.log(`Could not load folder ${folder}:`, error));
-    });
-  </script>
 </body>
 </html>
