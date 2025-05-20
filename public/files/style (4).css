@@ -1,0 +1,37 @@
+
+body {
+    margin: 0;
+    background-color: #fffaf5;
+    color: #4e342e;
+    font-family: 'Georgia', serif;
+    text-align: center;
+}
+.ritual {
+    max-width: 720px;
+    margin: auto;
+    padding: 60px 20px;
+}
+h1 {
+    font-size: 2.6em;
+    color: #8e443d;
+}
+h2 {
+    font-size: 1.4em;
+    color: #a1887f;
+    margin-bottom: 30px;
+}
+h3 {
+    font-size: 1.2em;
+    color: #6d4c41;
+    margin-top: 40px;
+}
+p, li {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+ul {
+    text-align: left;
+    margin: auto;
+    display: inline-block;
+    margin-top: 20px;
+}

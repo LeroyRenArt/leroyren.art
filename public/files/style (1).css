@@ -1,0 +1,48 @@
+
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #f5fcfb;
+    color: #2c3e50;
+    text-align: center;
+}
+.map {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+.map h1 {
+    font-size: 2.5em;
+    color: #009999;
+}
+.map h2 {
+    font-size: 1.4em;
+    color: #336666;
+}
+.map em {
+    display: block;
+    margin: 20px 0;
+    font-size: 1.1em;
+    color: #557a7a;
+}
+.nodes {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.node {
+    display: inline-block;
+    background-color: #b3e6cc;
+    color: #004d4d;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.node:hover {
+    background-color: #80d4aa;
+    color: #003333;
+}
