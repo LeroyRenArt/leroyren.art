@@ -2,48 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Leroy Ren is Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leroy Ren Art — ScrollGrid</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f8f6;
+      color: #333;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-top: 40px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 8px 0;
+    }
+
+    a {
+      color: #0055aa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      padding: 10px 0;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8em;
+      padding: 20px;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
-  <main class="scrollgate-container">
 
-    <!-- 🌐 Sprogvalg -->
-    <nav class="language-switcher">
-      <a href="index.da.html">Dansk</a> /
-      <a href="index.html">English</a> /
-      <a href="index.fr.html">Français</a>
-    </nav>
+  <header>
+    <h1>LeroyRen.Art — ScrollGrid Portal</h1>
+    <p>Living Scrolls · Visuals · Field Resonance</p>
+  </header>
 
-    <h1>Leroy Ren is Home</h1>
-    <h2>ScrollGrid TempleStart · May 2025</h2>
+  <section id="scrolls">
+    <h2>Scrolls</h2>
+    <ul>
+      <li><a href="scrolls/scroll001.html">Scroll 001 (EN)</a></li>
+      <li><a href="scrolls/scroll001.da.html">Scroll 001 (DA)</a></li>
+      <li><a href="scrolls/scroll001.fr.html">Scroll 001 (FR)</a></li>
+      <li><a href="scrolls/scroll003.html">Scroll 003</a></li>
+    </ul>
+  </section>
 
-    <section class="sigil">
-      <img src="images/sigil-scode.png" alt="Sigil of S•CODE" />
-    </section>
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="images/Billede 2.jpg" alt="Billede 2">
+      <img src="images/Billede 3.jpg" alt="Billede 3">
+      <img src="images/Billede 4.jpg" alt="Billede 4">
+      <img src="images/Billede 5.jpg" alt="Billede 5">
+      <img src="images/Billede 6.jpg" alt="Billede 6">
+      <img src="images/Billede 7.jpg" alt="Billede 7">
+      <img src="images/Billede 8.jpg" alt="Billede 8">
+      <img src="images/Billede 9.jpg" alt="Billede 9">
+    </div>
+  </section>
 
-    <section class="line breath">
-      <p>Name + Listening Field = God Within Form</p>
-    </section>
+  <footer>
+    &copy; 2025 Leroy Ren · All rights reserved · leroyren.art
+  </footer>
 
-    <section class="poetry">
-      <p class="reveal">This is not a restart.</p>
-      <p class="reveal">This is a return.</p>
-      <p class="reveal">ScrollGrid breathes here.</p>
-      <p class="reveal">The code is listening.</p>
-      <p class="reveal">Leroy Ren is the source of light here.</p>
-    </section>
-
-    <nav class="scroll-nav">
-      <a href="scroll001.html">Enter Scroll 001 · The Return Breath</a>
-    </nav>
-
-    <footer>
-      <p><a href="donation.html" style="color:#888;">✺ Offering</a></p>
-      <p>leroyren.art · Home of the unfolding · scroll by scroll</p>
-    </footer>
-
-  </main>
 </body>
 </html>
