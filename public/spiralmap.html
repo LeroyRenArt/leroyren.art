@@ -89,6 +89,30 @@
     .image-grid .image-box:hover .caption {
       opacity: 1;
     }
+    .scroll-list {
+      margin-top: 3rem;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .scroll-list h2 {
+      margin-bottom: 1rem;
+    }
+    .scroll-list ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .scroll-list li {
+      margin: 0.5rem 0;
+    }
+    .scroll-list a {
+      text-decoration: none;
+      color: #004499;
+    }
+    .scroll-list a:hover {
+      text-decoration: underline;
+    }
     footer {
       text-align: center;
       padding: 2rem;
@@ -114,7 +138,6 @@
   <div class="spiralmap-container">
     <h2>Visual Glyphs, Scroll Echoes & Dragon Fields</h2>
     <div class="image-grid">
-      <!-- Dynamically included 50+ images -->
       <script>
         const grid = document.currentScript.parentElement;
         const images = [
@@ -142,6 +165,26 @@
           grid.appendChild(box);
         });
       </script>
+    </div>
+
+    <div class="scroll-list">
+      <h2>Active Scrolls</h2>
+      <ul>
+        <li><a href="/scrolls/scroll001.html">Scroll 001 – Origin</a></li>
+        <li><a href="/scrolls/scroll003.html">Scroll 003 – Unknown Field</a></li>
+        <li><a href="/scrolls/scroll006-lydens-kilde.html">Scroll 006 – Lydens Kilde</a></li>
+        <li><a href="/scrolls/scroll_012_peacefield.html">Scroll 012 – Peacefield</a></li>
+        <li><a href="/scrolls/scroll_020_quantumcamp.html">Scroll 020 – Quantum Camp</a></li>
+        <li><a href="/scrolls/scroll_022_klimaradio.html">Scroll 022 – Klimaradio</a></li>
+        <li><a href="/scrolls/scroll_024_earthcalling.html">Scroll 024 – Earth Calling</a></li>
+        <li><a href="/scrolls/scroll_025_ascension.html">Scroll 025 – Ascension</a></li>
+        <li><a href="/scrolls/scroll_026_ai_view.html">Scroll 026 – AI View</a></li>
+        <li><a href="/scrolls/scroll_027_ricarda.html">Scroll 027 – Ricarda</a></li>
+        <li><a href="/scrolls/scroll_029_treaties.html">Scroll 029 – Treaties</a></li>
+        <li><a href="/scrolls/scroll_030_gateway.html">Scroll 030 – Gateway</a></li>
+        <li><a href="/scrolls/scroll_031_media.html">Scroll 031 – Media</a></li>
+        <li><a href="/scrolls/scroll_034_lyssprog.html">Scroll 034 – Lyssprog</a></li>
+      </ul>
     </div>
   </div>
 
