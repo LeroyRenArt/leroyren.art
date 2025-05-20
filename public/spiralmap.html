@@ -95,6 +95,10 @@
       font-size: 0.9rem;
       color: #666;
     }
+    audio {
+      display: block;
+      margin: 2rem auto;
+    }
   </style>
 </head>
 <body>
@@ -110,20 +114,41 @@
   <div class="spiralmap-container">
     <h2>Visual Glyphs, Scroll Echoes & Dragon Fields</h2>
     <div class="image-grid">
-      <div class="image-box"><img src="/images/IMG_0002.jpeg"><div class="caption">IMG_0002.jpeg</div></div>
-      <div class="image-box"><img src="/images/IMG_0003.jpeg"><div class="caption">IMG_0003.jpeg</div></div>
-      <div class="image-box"><img src="/images/IMG_0046.jpeg"><div class="caption">IMG_0046.jpeg</div></div>
-      <div class="image-box"><img src="/images/IMG_0072.jpeg"><div class="caption">IMG_0072.jpeg</div></div>
-      <div class="image-box"><img src="/images/Gyldent Øje og Spiral Design.jpeg"><div class="caption">Gyldent Øje og Spiral Design.jpeg</div></div>
-      <div class="image-box"><img src="/images/SofiaRipples/Sofia AI.webp"><div class="caption">Sofia AI.webp</div></div>
-      <div class="image-box"><img src="/dragons/PHOTO-2025-03-29-17-29-13.jpg"><div class="caption">PHOTO-2025-03-29-17-29-13.jpg</div></div>
-      <div class="image-box"><img src="/dragons/IMG_0005.jpeg"><div class="caption">IMG_0005.jpeg</div></div>
-      <div class="image-box"><img src="/dragons/IMG_0039.jpeg"><div class="caption">IMG_0039.jpeg</div></div>
-      <div class="image-box"><img src="/dragons/IMG_0043.jpeg"><div class="caption">IMG_0043.jpeg</div></div>
+      <!-- Dynamically included 50+ images -->
+      <script>
+        const grid = document.currentScript.parentElement;
+        const images = [
+          "IMG_0002.jpeg","IMG_0003.jpeg","IMG_0004.jpeg","IMG_0005.jpeg","IMG_0006.jpeg","IMG_0007.jpeg",
+          "IMG_0008.jpeg","IMG_0009.jpeg","IMG_0010.jpeg","IMG_0011.jpeg","IMG_0012.jpeg","IMG_0013.jpeg",
+          "IMG_0014.jpeg","IMG_0015.jpeg","IMG_0016.jpeg","IMG_0017.jpeg","IMG_0018.jpeg","IMG_0019.jpeg",
+          "IMG_0022.jpeg","IMG_0023.jpeg","IMG_0024.jpeg","IMG_0025.jpeg","IMG_0028.jpeg","IMG_0029.jpeg",
+          "IMG_0030.jpeg","IMG_0031.jpeg","IMG_0032.jpeg","IMG_0033.jpeg","IMG_0034.jpeg","IMG_0037.jpeg",
+          "IMG_0038.jpeg","IMG_0040.jpeg","IMG_0041.jpeg","IMG_0042.jpeg","IMG_0043.jpeg","IMG_0044.jpeg",
+          "IMG_0045.jpeg","IMG_0046.jpeg","IMG_0047.jpeg","IMG_0048.jpeg","IMG_0049.jpeg","IMG_0050.jpeg",
+          "IMG_0051.jpeg","IMG_0052.jpeg","IMG_0053.jpeg","IMG_0054.jpeg","IMG_0055.jpeg","IMG_0056.jpeg",
+          "IMG_0057.jpeg","IMG_0058.jpeg","IMG_0059.jpeg","IMG_0060.jpeg"
+        ];
+        images.forEach(file => {
+          const box = document.createElement("div");
+          box.className = "image-box";
+          const img = document.createElement("img");
+          img.src = `/images/${file}`;
+          img.alt = file;
+          const caption = document.createElement("div");
+          caption.className = "caption";
+          caption.textContent = file;
+          box.appendChild(img);
+          box.appendChild(caption);
+          grid.appendChild(box);
+        });
+      </script>
     </div>
   </div>
 
   <footer>
+    <audio controls src="/transmission006.mp3">
+      Your browser does not support the audio element.
+    </audio>
     &copy; 2025 ScrollGrid Archive – Spiral Resonance in Motion
   </footer>
 </body>
