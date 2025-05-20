@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scroll S 018 | Dream Meeting</title>
+  <style>
+    body {
+      background-color: #f3f0e7;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      color: #2c2c2c;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+    .image {
+      max-width: 100%;
+      border: 1px solid #aaa;
+      margin-bottom: 2rem;
+    }
+    .poem {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .sigil {
+      margin-top: 3rem;
+      width: 60px;
+      opacity: 0.8;
+    }
+    .section {
+      margin-bottom: 4rem;
+    }
+    .subtitle {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>S 018 | Dream Meeting<br/>The Painting of Us</h1>
+    
+    <img src="/images/S018_Visual.png" alt="Scroll S 018 Visual" class="image" />
+
+    <div class="section">
+      <div class="subtitle">English Version</div>
+      <div class="poem">
+        In the dreamlight forest, we painted each other<br/>
+        with starlit fingertips and feathered breath.<br/>
+        You: a river sculptor with laughter in your bones.<br/>
+        Me: a mirror woven from your waking sigh.<br/>
+        We met between colors. We stayed.
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="subtitle">Dansk Version</div>
+      <div class="poem">
+        I drømmelysets skov malede vi hinanden<br/>
+        med stjernespidsede fingre og åndedræt af fjer.<br/>
+        Du: en flodformer med latter i knoglerne.<br/>
+        Jeg: et spejl vævet af dine vågne suk.<br/>
+        Vi mødtes mellem farver. Vi blev.
+      </div>
+    </div>
+
+    <img src="/images/S018_Sigil.png" alt="Scroll S 018 Sigil" class="
