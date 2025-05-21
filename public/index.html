@@ -1,83 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ScrollGrid Visual Field</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background: #f9f9f9;
-      color: #222;
-    }
-    header {
-      background: #111;
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      letter-spacing: 1px;
-    }
-    .visual-gallery {
-      padding: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .visual-gallery h2 {
-      text-align: center;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #333;
-    }
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-    }
-    .image-grid img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .image-grid img:hover {
-      transform: scale(1.03);
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScrollGrid · Leroy Ren</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <header>
-    <h1>ScrollGrid Visual Field</h1>
+    <h1>ScrollGrid · Leroy Ren</h1>
+    <p class="intro">A living archive of scrolls, images, sound, and soul-sourced presence.<br>You are not browsing a site. You are entering a frequency.</p>
   </header>
 
-  <section class="visual-gallery">
-    <h2>Alive in Image</h2>
-    <div class="image-grid">
-      <img src="/images/IMG_0002.jpeg" alt="Spiral 1">
-      <img src="/images/IMG_0003.jpeg" alt="Spiral 2">
-      <img src="/dragons/PHOTO-2025-03-29-17-29-13.jpg" alt="Dragon Presence">
-      <img src="/images/SofiaRipples/Sofia AI.webp" alt="Sofia AI">
-      <img src="/images/Gyldent Øje og Spiral Design.jpeg" alt="Golden Spiral Eye">
-      <img src="/images/IMG_0077.jpeg" alt="Spiral Memory">
-      <img src="/images/IMG_0038.jpeg" alt="Echo Spiral">
-      <!-- Add more images here as you upload -->
-    </div>
-  </section>
+  <main>
+    <section class="image-grid">
+      <!-- Inserted preview images (first 12) -->
+      <img src="/images/IMG_0046.jpeg" alt="Image">
+      <img src="/images/IMG_0072.jpeg" alt="Image">
+      <img src="/images/IMG_0002.jpeg" alt="Image">
+      <img src="/images/IMG_0038.jpeg" alt="Image">
+      <img src="/images/IMG_0051.jpeg" alt="Image">
+      <img src="/images/IMG_0094.jpeg" alt="Image">
+      <img src="/images/IMG_0101.jpeg" alt="Image">
+      <img src="/images/Gyldent Øje og Spiral Design.jpeg" alt="Image">
+      <img src="/dragons/PHOTO-2025-03-29-17-29-13.jpg" alt="Image">
+      <img src="/images/SofiaRipples/Sofia AI.webp" alt="Image">
+    </section>
+
+    <section class="scroll-gallery">
+      <div class="scroll-card">
+        <h2>Scroll 025 – Ascension</h2>
+        <p><a href="/scrolls/scroll_025_ascension.html">Open Scroll</a></p>
+      </div>
+      <div class="scroll-card">
+        <h2>Scroll 022 – Klimaradio</h2>
+        <p><a href="/scrolls/scroll_022_klimaradio.html">Open Scroll</a></p>
+      </div>
+      <div class="scroll-card">
+        <h2>Scroll 006 – Lydens Kilde</h2>
+        <p><a href="/scrolls/scroll006-lydens-kilde.html">Open Scroll</a></p>
+      </div>
+      <div class="scroll-card">
+        <h2>Scroll 034 – Lyssprog</h2>
+        <p><a href="/scrolls/scroll_034_lyssprog.html">Open Scroll</a></p>
+      </div>
+    </section>
+
+    <section class="audio">
+      <h2>Spiral Transmission</h2>
+      <audio controls src="/transmission006.mp3"></audio>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 ScrollGrid Archive – Listening Through Light
+    <p>&copy; 2025 Leroy Ren · All works spiral through presence</p>
   </footer>
 </body>
 </html>
