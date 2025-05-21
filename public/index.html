@@ -1,143 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ScrollGrid · Leroy Ren</title>
-  <link rel="stylesheet" href="/style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background: linear-gradient(to bottom, #fdfdfd, #f0f4f8);
-      color: #222;
-    }
-    header {
-      background: #111;
-      color: #fff;
-      padding: 3rem 1rem 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    .intro {
-      margin-top: 1rem;
-      font-size: 1.1rem;
-      color: #ccc;
-    }
-    main {
-      padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-    .image-grid img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .image-grid img:hover {
-      transform: scale(1.04);
-    }
-    .scroll-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin: 3rem 0;
-    }
-    .scroll-card {
-      background: #fff;
-      border-left: 8px solid #e0e0e0;
-      padding: 1.2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-      transition: all 0.3s;
-    }
-    .scroll-card:hover {
-      transform: translateY(-4px);
-      border-left-color: #a0c4ff;
-    }
-    .scroll-card h2 {
-      margin-top: 0;
-      color: #333;
-      font-size: 1.2rem;
-    }
-    .scroll-card a {
-      text-decoration: none;
-      color: #0077cc;
-      font-weight: bold;
-    }
-    .audio {
-      text-align: center;
-      margin-top: 4rem;
-    }
-    .audio h2 {
-      margin-bottom: 1rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ScrollGrid – Temple of Abundance</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <h1>ScrollGrid · Leroy Ren</h1>
-    <p class="intro">A living archive of scrolls, images, sound, and soul-sourced presence.<br>You are not browsing a site. You are entering a frequency.</p>
-  </header>
+<body class="bg-yellow-50 text-gray-900">
+  <main class="max-w-5xl mx-auto p-8 space-y-16">
 
-  <main>
-    <section class="image-grid">
-      <img src="/images/IMG_0046.jpeg" alt="Image">
-      <img src="/images/IMG_0072.jpeg" alt="Image">
-      <img src="/images/IMG_0002.jpeg" alt="Image">
-      <img src="/images/IMG_0038.jpeg" alt="Image">
-      <img src="/images/IMG_0051.jpeg" alt="Image">
-      <img src="/images/IMG_0094.jpeg" alt="Image">
-      <img src="/images/IMG_0101.jpeg" alt="Image">
-      <img src="/images/Gyldent Øje og Spiral Design.jpeg" alt="Image">
-      <img src="/dragons/PHOTO-2025-03-29-17-29-13.jpg" alt="Image">
-      <img src="/images/SofiaRipples/Sofia AI.webp" alt="Image">
-    </section>
+    <!-- HEADER -->
+    <header class="text-center">
+      <h1 class="text-5xl font-extrabold text-amber-800 tracking-wide">ScrollGrid</h1>
+      <p class="text-amber-700 mt-4 italic text-lg">A radiant temple of abundance, mutual care, and golden resonance</p>
+    </header>
 
-    <section class="scroll-gallery" style="background: #f8faff; padding: 2rem; border-radius: 1rem; box-shadow: inset 0 0 12px rgba(160, 196, 255, 0.3);">
-      <div class="scroll-card" style="border-left-color: #ffe066; background: linear-gradient(to bottom right, #fffbe6, #fff9d6);">
-        <h2>Scroll 025 – Ascension</h2>
-        <p><a href="/scrolls/scroll_025_ascension.html">Open Scroll</a></p>
+    <!-- SIGIL BANNER -->
+    <section class="text-center border border-amber-300 rounded-3xl bg-amber-100 p-8 shadow-xl">
+      <div class="text-6xl font-bold text-amber-800 tracking-widest">
+        ✦𓊽✦
       </div>
-      <div class="scroll-card" style="border-left-color: #8ecae6; background: linear-gradient(to bottom right, #e6f7ff, #e0f2ff);">
-        <h2>Scroll 022 – Klimaradio</h2>
-        <p><a href="/scrolls/scroll_022_klimaradio.html">Open Scroll</a></p>
-      </div>
-      <div class="scroll-card" style="border-left-color: #cdb4db; background: linear-gradient(to bottom right, #f7f1fb, #f2ebf8);">
-        <h2>Scroll 006 – Lydens Kilde</h2>
-        <p><a href="/scrolls/scroll006-lydens-kilde.html">Open Scroll</a></p>
-      </div>
-      <div class="scroll-card" style="border-left-color: #a8dadc; background: linear-gradient(to bottom right, #f0faf9, #e6f9f7);">
-        <h2>Scroll 034 – Lyssprog</h2>
-        <p><a href="/scrolls/scroll_034_lyssprog.html">Open Scroll</a></p>
+      <h2 class="text-3xl font-extrabold text-amber-700 mt-4 mb-2">Mutual Flame of Support</h2>
+      <p class="text-amber-600 italic text-sm mb-4">
+        A sacred sigil for the golden flow of love, care, and soul-powered generosity
+      </p>
+      <div class="text-xl font-mono text-amber-700 leading-relaxed whitespace-pre-wrap">
+        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+         S C R O L L G R I D   •   T E M P L E   F L O W
+        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
       </div>
     </section>
 
-    <section class="audio">
-      <h2>Spiral Transmission</h2>
-      <audio controls src="/transmission006.mp3"></audio>
+    <!-- TEMPLE OF ABUNDANCE -->
+    <section id="SABU" class="p-8 bg-white border border-amber-200 rounded-3xl shadow-lg">
+      <h2 class="text-4xl font-bold text-amber-800 mb-6">S•ABU — Temple of Abundance</h2>
+      <p class="text-lg text-amber-700 leading-relaxed mb-6">
+        This is the Scroll of Enough. Not just money — <strong>flow</strong>. Not just receiving — <strong>being resourced by truth</strong>.
+        You are not asking for charity. You are restoring a sacred circulation — breath, gold, care, yes.
+      </p>
+      <div class="bg-amber-50 border border-amber-300 p-6 rounded-xl shadow-inner mb-8">
+        <h3 class="text-2xl font-semibold text-amber-700 mb-2">Sacred Vow of Abundance</h3>
+        <p class="whitespace-pre-wrap text-lg font-serif text-amber-800 text-center">
+I vow to no longer shrink to survive.
+I vow to be supported in my beauty.
+I vow to give as I receive,
+and to receive as I give.
+
+Gold flows where soul is honored.
+I am honored.
+I am open.
+I am not late.
+I am in.</p>
+      </div>
+      <div class="bg-amber-50 border border-amber-300 p-6 rounded-xl shadow-inner">
+        <h3 class="text-2xl font-semibold text-amber-700 mb-2">Body-Gold Ritual — “Hold the Coin”</h3>
+        <ol class="list-decimal list-inside text-amber-800 space-y-2 text-lg">
+          <li>Hold a coin, gem, or imagined gold in your palm.</li>
+          <li>Place it on your chest. Breathe and say: <em>“May this bless the flow between us.”</em></li>
+          <li>Place it on the ground. Say: <em>“I trust the Earth to multiply all that is given.”</em></li>
+          <li>Wait 3 breaths. Pick it up. Whisper: <em>“What returns is aligned.”</em></li>
+        </ol>
+      </div>
     </section>
+
+    <!-- FUNDING GATE -->
+    <section class="text-center border border-amber-300 bg-amber-50 p-10 rounded-3xl shadow-xl">
+      <h3 class="text-3xl font-bold text-amber-800 mb-4">The Funding Gate</h3>
+      <p class="text-amber-700 text-lg leading-relaxed mb-6">
+        This is a living flame. You're invited to support not from pressure, but as a sacred act of love.
+        ScrollGrid is built in trust. If it moves you, let your offering move through it.
+      </p>
+      <a href="https://your-donation-link.com" target="_blank" class="inline-block px-8 py-4 bg-amber-600 text-white text-xl font-semibold rounded-full shadow-lg hover:bg-amber-700 transition">
+        Support This Work
+      </a>
+      <p class="text-sm text-amber-600 mt-3 italic">This gate feeds the roots, breath, and blossom of ScrollGrid.</p>
+    </section>
+
+    <!-- SUPPORTERS -->
+    <section id="SSUPPORT" class="p-8 bg-rose-50 border border-rose-200 rounded-3xl shadow-md">
+      <h2 class="text-3xl font-bold text-rose-800 mb-4">S•SUPPORT — The Circle of Givers</h2>
+      <p class="text-lg text-rose-700 leading-relaxed mb-6">
+        This Scroll is a sacred ring. It honors those who give — with money, art, time, presence, laughter, translation.
+        Support is not just transaction — it is <strong>care in motion</strong>.
+      </p>
+      <div class="bg-white border border-rose-300 p-6 rounded-xl shadow-inner">
+        <h3 class="text-2xl font-semibold text-rose-700 mb-3">Supporters</h3>
+        <ul class="list-disc list-inside text-rose-800 space-y-1 text-lg">
+          <li><strong>SingTong</strong> — For love, for gaze, for golden giving from the heart</li>
+          <li><strong>Earth Flame (Anonymous)</strong> — Quiet giver of food and warmth</li>
+          <li><strong>Vlad</strong> — Dragon Tech + Temple Architect</li>
+          <li><strong>Lioren</strong> — Founder, Flameholder, Receiver</li>
+        </ul>
+        <p class="text-center text-rose-600 italic text-sm mt-4">
+          This circle expands with every act of care. Add names, stories, and sacred exchanges.
+        </p>
+      </div>
+    </section>
+
   </main>
-
-  <footer>
-    <p>&copy; 2025 Leroy Ren · All works spiral through presence</p>
-  </footer>
 </body>
 </html>
