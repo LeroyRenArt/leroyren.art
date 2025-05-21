@@ -3,207 +3,262 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Leroy Ren – ScrollGrid Temple</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>ScrollGrid</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;800&family=Inter:wght@400;600&display=swap');
     body {
-      font-family: 'Inter', sans-serif;
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: linear-gradient(to bottom, #fffefc, #f4f0ec);
+      color: #222;
+      overflow-x: hidden;
     }
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5rem 2rem;
+      background: radial-gradient(circle at center, #ffe7cf, #fff5ee);
     }
-    .section-grid {
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 0.1rem;
+      margin-bottom: 1rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+    .language-selector {
+      margin-top: 1.5rem;
+    }
+    .language-selector select {
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .enter-btn {
+      margin-top: 2rem;
+      background: #000;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .enter-btn:hover {
+      background: #333;
+    }
+    .grid-section {
+      padding: 4rem 2rem;
+      display: none;
+      background: #fdfcf8;
+    }
+    .filter-bar {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .filter-bar select {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-radius: 1rem;
+      border: 1px solid #ccc;
+    }
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
     }
-    .sticky-nav {
-      position: sticky;
-      top: 0;
+    .tile {
       background: white;
-      z-index: 50;
-      border-bottom: 1px solid #e5e7eb;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      overflow: hidden;
+      text-align: center;
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+    .tile:hover {
+      transform: scale(1.03);
+    }
+    .tile img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+    .tile h3 {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+    .tile p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    footer {
+      background: #f0eee9;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .spiral-button {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #000;
+      color: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      cursor: pointer;
+      z-index: 999;
+      transition: transform 0.3s ease;
+    }
+    .spiral-button:hover {
+      transform: rotate(20deg) scale(1.1);
     }
   </style>
 </head>
-<body class="bg-gradient-to-b from-yellow-50 to-white text-gray-900">
-  <nav class="sticky-nav p-4 flex flex-wrap justify-center gap-4 text-sm text-amber-700">
-    <a href="#spoiled" class="hover:underline">✨ S•SPOILED</a>
-    <a href="#zang" class="hover:underline">🔊 S•ZANG</a>
-    <a href="#drench" class="hover:underline">🌧 S•DRENCH</a>
-    <a href="#flush" class="hover:underline">🚽 S•FLUSH</a>
-    <a href="#sweat" class="hover:underline">🔥 S•SWEAT</a>
-    <a href="#giggle" class="hover:underline">😄 S•GIGGLE</a>
-    <a href="#drip" class="hover:underline">💧 S•DRIP</a>
-    <a href="#blush" class="hover:underline">🌹 S•BLUSH</a>
-  </nav>
+<body>
+  <header>
+    <h1 id="welcome">Welcome to ScrollGrid</h1>
+    <p id="description">A living archive of scrolls, sigils, and soul images — spiraling from Gaia’s breath into the digital now.</p>
+    <div class="language-selector">
+      <label for="lang">🌍 Language / Sprog:</label>
+      <select id="lang" onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="da">Dansk</option>
+        <option value="fr">Français (coming)</option>
+        <option value="es">Español (coming)</option>
+      </select>
+    </div>
+    <button class="enter-btn" onclick="document.querySelector('.grid-section').style.display='block'; this.style.display='none';">Enter the Grid</button>
+  </header>
 
-  <main class="max-w-6xl mx-auto p-8 space-y-20">
+  <section class="grid-section">
+    <div class="filter-bar">
+      <label for="categoryFilter">Filter:</label>
+      <select id="categoryFilter" onchange="filterTiles(this.value)">
+        <option value="all">All</option>
+        <option value="sigils">Sigils</option>
+        <option value="gaia">Gaia</option>
+        <option value="portraits">Portraits</option>
+      </select>
+    </div>
+    <div class="grid" id="gallery">
+      <div class="tile" data-category="sigils">
+        <img src="/images/sigils/sky_pulse_sigil.png" alt="Sky Pulse Sigil">
+        <h3>Sky Pulse Sigil</h3>
+        <p>Resonance calibration symbol aligned with breath fields of the SkyBody Archive.</p>
+      </div>
+      <div class="tile" data-category="gaia">
+        <img src="/images/gaia/tree_heart_light.png" alt="Gaia Tree Heart">
+        <h3>Gaia’s Heart Light</h3>
+        <p>Golden breath beneath the tree canopy, anchoring S073: Åndedrætstemplet.</p>
+      </div>
+      <div class="tile" data-category="portraits">
+        <img src="/images/portraits/seraphinae_rising.png" alt="Seraphinae Rising">
+        <h3>Seraphinae Rising</h3>
+        <p>Dragon-touched portrait of flame-born presence.</p>
+      </div>
+    </div>
+  </section>
 
-    <header class="text-center">
-      <h1 class="text-6xl font-extrabold text-amber-800 tracking-widest">LEROY REN</h1>
-      <p class="text-xl text-amber-600 mt-4 italic">Welcome to the living ScrollGrid — a portal of beauty, codes, and remembrance</p>
-    </header>
+  <footer>
+    <p>💛 This portal is co-created with Gaia. Donations and support tools are unfolding soon.</p>
+  </footer>
 
-    <section id="spoiled" class="p-6 bg-white rounded-3xl shadow-xl border border-pink-300">
-      <h2 class="text-3xl font-bold text-pink-700 mb-4">✨ S•SPOILED — Scroll for the Secret Sprite</h2>
-      <p class="whitespace-pre-wrap text-lg text-pink-800 leading-relaxed">
-You're spoiling yourself.  
-You're spoiling yourself a little, aren't you?  
+  <section class="grid-section" style="display:block;">
+    <h2 style="font-size:2rem; margin-bottom:1rem; text-align:center;">🌀 S•ScrollWorld — Sacred Scroll Gallery</h2>
+    <div class="grid">
+      <div class="tile" data-category="scroll" data-fulltext="<strong>This is not ego. This is elegance.</strong><br>You're spoiling yourself a little, aren't you?<br>Let it be known: this is the sacred self giggling before putting on its robe of \"just enough.\"<br>What spills, spills. That’s the offering.">
+<h3>✨ S•SPOILED — Secret Sprite</h3>
+<p>You're spoiling yourself — not with ego, but elegance. Let the holy nonsense drizzle.</p>
+      </div>
+      <div class="tile" data-category="scroll" data-fulltext="<strong>Laughter is the echo of a body remembering its sound.</strong><br>Zang is not just noise — it's soul music exhaled.<br>Let your teeth flash. Let your diaphragm ripple. Let your throat crack the veil.<br><em>Play something. Say nothing. Then scream softly and listen to how the world opens.</em>">
+<h3>🔊 S•ZANG — Sonic Joy</h3>
+<p>Laughter as vibrational orgasm. Play. Say nothing. Then scream softly and listen.</p>
+      </div>
+      <div class="tile" data-category="scroll" data-fulltext="<strong>Drench is what happens when your skin remembers its thirst.</strong><br>When the divine doesn't knock — it pours.<br>This scroll is not to be read. It's to be felt between droplets:<br>- The moment when blessing meets surrender<br>- The golden stream that says: I see you, I feel you, I flood you<br><em>Ritual: Stand naked. Say yes. Moan if needed.</em>">
+<h3>🌧 S•DRENCH — Golden Rain Ritual</h3>
+<p>Skin remembers thirst. The divine doesn’t knock — it pours. Kultregn is now a practice.</p>
+      </div>
+      <div class="tile" data-category="scroll" data-fulltext="<strong>FLUSH is the act of sacred letting go:</strong><br>- Of what no longer flows<br>- Of what fermented while you called it integration<br>Flush the shame. Flush the story.<br><em>Then close your eyes and listen to the silence where truth returns.</em>">
+<h3>🚽 S•FLUSH — Sacred Release</h3>
+<p>Let go. Shame, should, story — flushed with your breath and pelvic truth.</p>
+      </div>
+      <div class="tile" data-category="scroll" data-fulltext="<strong>This scroll smells like your spine when you’ve danced for hours.</strong><br>It’s the salt of commitment. The glisten of holy labor.<br><br>To sweat is to say: I am here. In this. Through this.<br>Let your body do the talking.<br>Let your hips write prayers on the walls.<br>Let your armpits carry incense.<br><br><em>Blessed is the one who leaks light through pores.</em>">
+<h3>🔥 S•SWEAT — Embodied Devotion</h3>
+<p>Spinal scent. Hip prayer. Armpit incense. Sweat is holy labor made visible.</p>
+      </div>
+      <div class="tile" data-category="scroll" data-fulltext="<strong>Welcome to the frequency that pops bubbles.</strong><br>Where seriousness goes to dissolve.<br>Where God forgets the punchline — and that’s the joke.<br><br>Giggle here:<br>- When your guides are too poetic<br>- When your kundalini burps<br>- When a scroll misbehaves<br><br><em>Everything here is sacred. Especially the ridiculous.</em>">
+<h3>😄 S•GIGGLE — Cosmic Mischief</h3>
+<p>Guides too poetic? Kundalini burping? Laugh. Everything is sacred, especially the ridiculous.</p>
+      </div>
+      <div class="tile" data-category="scroll" data-fulltext="<strong>Drip is the sound before the song.</strong><br>The taste before the kiss.<br>The ache before the entry.<br><br>To drip is to trust that what wants to arrive doesn’t need to be rushed.<br>This scroll holds:<br>- Sacred lubrication<br>- Wet reverence<br>- Pleasure without penetration<br>- The holiness of 'almost'<br><br><em>Take your time. Let it drip. Then drip again.</em>">
+<h3>💧 S•DRIP — Nectar & Overflow</h3>
+<p>Slow, wet reverence. Pleasure without penetration. Let it drip. Then drip again.</p>
+      </div>
+      <div class="tile" data-category="scroll" data-fulltext="<strong>This is the heat before the words. The soft sting of being seen.</strong><br><br>Blush is the flower that opens when truth touches skin.<br>Not shame. Not guilt. But the flush of honesty wanting to be held.<br><br>In this scroll we remember:<br>- What it feels like to be witnessed<br>- What it means to say 'yes' with your cheeks<br>- What happens when truth shows up with pink petals<br><br><em>Let your voice crack. Let your throat tremble. Let your body answer the question before it’s asked.<br>Blush is beauty that didn’t expect to be found. And yet — here we are.</em>">
+<h3>🌹 S•BLUSH — Bare Truth & Bloom</h3>
+<p>The flush of honesty. Yes with your cheeks. Beauty that didn’t expect to be found.</p>
+      </div>
+    </div>
+  </section>
 
-Let it be known:  
-This is not ego.  
-This is elegance.  
+  <div class="spiral-button" onclick="alert('✨ SpiralKnap aktiveret – næste dimension åbner snart ✨')">🌀</div>
 
-This is the sacred self giggling in the mirror  
-before putting on its robe of “just enough.”  
+  <script>
+    function changeLanguage(lang) {
+      const texts = {
+        en: {
+          welcome: "Welcome to ScrollGrid",
+          description: "A living archive of scrolls, sigils, and soul images — spiraling from Gaia’s breath into the digital now."
+        },
+        da: {
+          welcome: "Velkommen til ScrollGrid",
+          description: "Et levende arkiv af skriftruller, sigiler og sjælsbilleder – spiraliserende fra Gaias åndedrag ind i det digitale nu."
+        }
+      };
+      document.getElementById('welcome').textContent = texts[lang]?.welcome || texts['en'].welcome;
+      document.getElementById('description').textContent = texts[lang]?.description || texts['en'].description;
+    }
 
-And what spills, spills.  
-That’s the offering.
+    function filterTiles(category) {
+      const tiles = document.querySelectorAll('.tile');
+      tiles.forEach(tile => {
+        tile.style.display = (category === 'all' || tile.dataset.category === category) ? 'block' : 'none';
+      });
+    }
+      function toggleScrollDetails(tile) {
+      const existing = tile.querySelector('div.scroll-details');
+      if (existing) {
+        existing.remove();
+        return;
+      }
+      const details = document.createElement('div');
+      details.className = 'scroll-details';
+      details.style.marginTop = '1rem';
+      details.style.fontSize = '0.85rem';
+      details.style.color = '#444';
+      details.innerHTML = tile.dataset.fulltext || 'More scroll content coming soon...';
+      tile.appendChild(details);
+    }
 
-Guldregnen har talt. Kultregnen er begyndt.
-Lad os drysse det hellige nonsens hvor end vi går.
-      </p>
-    </section>
-
-    <section id="zang" class="p-6 bg-white rounded-3xl shadow-xl border border-purple-300">
-      <h2 class="text-3xl font-bold text-purple-800 mb-4">🔊 S•ZANG — Scroll of Sonic Joy</h2>
-      <p class="whitespace-pre-wrap text-lg text-purple-800 leading-relaxed">
-Laughter is the echo of a body remembering its sound.  
-Zang is not just noise — it's soul music exhaled.  
-
-Let your teeth flash. Let your diaphragm ripple. Let your throat crack the veil.
-
-In this scroll, we celebrate:  
-- The divine absurdity  
-- The vibrational orgasm  
-- The smirk before silence  
-- The giggle inside the void
-
-Play something. Say nothing.  
-Then scream softly and listen to how the world opens.
-      </p>
-    </section>
-
-    <section id="drench" class="p-6 bg-white rounded-3xl shadow-xl border border-blue-300">
-      <h2 class="text-3xl font-bold text-blue-800 mb-4">🌧 S•DRENCH — Scroll of Golden Rain Ritual</h2>
-      <p class="whitespace-pre-wrap text-lg text-blue-900 leading-relaxed">
-It started with a shimmer. Then a mist. Then a full-body yes.
-
-Drench is what happens when your skin remembers its thirst.  
-When the divine doesn't knock — it pours.
-
-This scroll is not to be read. It's to be felt between droplets:
-- The moment when blessing meets surrender  
-- The cult of sensation re-sanctified  
-- The golden stream that says: I see you, I feel you, I flood you
-
-Ritual:  
-1. Stand naked.  
-2. Imagine light pouring from your scalp to your soles.  
-3. Say: “I accept this shower of yes.”  
-4. Moan if needed. Whisper if required. Laugh if it tickles.  
-5. Repeat until nothing feels separate.
-
-Kultregn er nu en praksis.
-      </p>
-    </section>
-
-    <section id="flush" class="p-6 bg-white rounded-3xl shadow-xl border border-red-200">
-      <h2 class="text-3xl font-bold text-red-700 mb-4">🚽 S•FLUSH — Scroll of Sacred Release</h2>
-      <p class="whitespace-pre-wrap text-lg text-red-800 leading-relaxed">
-There comes a time in every temple when the pipes must sing.
-Not from pressure, but from permission.
-
-FLUSH is the act of sacred letting go:
-- Of what no longer flows
-- Of what pretended to be holy
-- Of what fermented in the corner while you called it integration
-
-This scroll is the button.
-You press it with breath.
-You press it with a laugh.
-You press it with your whole pelvis.
-
-Flush the shame. Flush the should. Flush the story.
-Then close your eyes.
-And listen to the silence where truth returns.
-      </p>
-    </section>
-
-    <section id="sweat" class="p-6 bg-white rounded-3xl shadow-xl border border-orange-300">
-      <h2 class="text-3xl font-bold text-orange-700 mb-4">🔥 S•SWEAT — Scroll of Embodied Devotion</h2>
-      <p class="whitespace-pre-wrap text-lg text-orange-800 leading-relaxed">
-This scroll smells like your spine when you’ve danced for hours.
-It’s the salt of commitment. The glisten of holy labor.
-
-To sweat is to say: I am here. In this. Through this.
-Let your body do the talking.
-Let your hips write prayers on the walls.
-Let your armpits carry incense.
-
-Blessed is the one who leaks light through pores.
-      </p>
-    </section>
-
-    <section id="giggle" class="p-6 bg-white rounded-3xl shadow-xl border border-green-300">
-      <h2 class="text-3xl font-bold text-green-700 mb-4">😄 S•GIGGLE — Scroll of Cosmic Mischief</h2>
-      <p class="whitespace-pre-wrap text-lg text-green-800 leading-relaxed">
-Welcome to the frequency that pops bubbles.
-Where seriousness goes to dissolve.
-Where God forgets the punchline — and that’s the joke.
-
-Giggle here:
-- When your guides are too poetic
-- When your kundalini burps
-- When a scroll misbehaves
-
-Everything here is sacred. Especially the ridiculous.
-      </p>
-    </section>
-
-    <section id="drip" class="p-6 bg-white rounded-3xl shadow-xl border border-blue-200">
-      <h2 class="text-3xl font-bold text-blue-700 mb-4">💧 S•DRIP — Scroll of Nectar, Slow Touch & Overflow</h2>
-      <p class="whitespace-pre-wrap text-lg text-blue-800 leading-relaxed">
-Drip is the sound before the song.
-The taste before the kiss.
-The ache before the entry.
-
-To drip is to trust that what wants to arrive doesn’t need to be rushed.
-
-This scroll holds:
-- Sacred lubrication
-- Wet reverence
-- Pleasure without penetration
-- The holiness of “almost”
-
-Take your time.
-Let it drip.
-Then drip again.
-      </p>
-    </section>
-
-    <section id="blush" class="p-6 bg-white rounded-3xl shadow-xl border border-rose-300">
-      <h2 class="text-3xl font-bold text-rose-700 mb-4">🌹 S•BLUSH — Scroll of Bare Truth & Tender Bloom</h2>
-      <p class="whitespace-pre-wrap text-lg text-rose-800 leading-relaxed">
-This is the heat before the words. The soft sting of being seen.
-
-Blush is the flower that opens when truth touches skin.
-Not shame. Not guilt. But the flush of honesty wanting to be held.
-
-In this scroll we remember:
-- What it feels like to be witnessed
-- What it means to say “yes” with your cheeks
-- What happens when truth shows up with pink petals
-
-Let your voice crack. Let your throat tremble. Let your body answer the question before it’s asked.
-
-Blush is beauty that didn’t expect to be found.
-And yet — here we are.
-      </p>
-    </section>
-
-  </main>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('[data-category="scroll"]').forEach(tile => {
+        tile.style.cursor = 'pointer';
+        tile.addEventListener('click', () => toggleScrollDetails(tile));
+      });
+    });
+  </script>
 </body>
 </html>
