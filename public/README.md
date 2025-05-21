@@ -1,52 +1,73 @@
 # 📘 README – leroyren.art / ScrollGrid
 
-## 🌀 Formål
-Dette site er et levende kunstværk skabt af Leroy Ren – et spiralisk felt af billeder, scrolls, lyd og portaler. Alt styres gennem en `index.html`, som er din forside.
+## 🌀 Purpose
+This site is a living art field created by **Leroy Ren** – a spiral of images, scrolls, sound and portals. It is all anchored in `index.html`, which serves as your homepage (previously called SpiralMap).
 
 ---
 
-## 📁 Mapper og struktur
+## 📁 Folder Structure
 
 ### `index.html`
-Din forside. Indeholder SpiralMap med:
-- Scroll-kort
-- Farvekoder
-- Billeder og lyd
+Your homepage. Contains SpiralMap with:
+- Scroll cards
+- Color-coded fields
+- Images and sound
 
 ### `/public/images/`
-Alle billeder, som vises i SpiralMap.
-- Brug navne som `IMG_0046.jpeg`
-- Bruges også til billeder på scroll-kort
+All images displayed in SpiralMap.
+- Use names like `IMG_0046.jpeg`
+- Also used for scroll card illustrations
 
 ### `/public/scrolls/`
-Alle HTML-scrolls du åbner via kortene.
-- Eksempel: `scroll_025_ascension.html`
+All HTML scrolls that open via the cards.
+- Example: `scroll_025_ascension.html`
 
 ### `/public/files/`
-Breve, PDF'er, .docx-scrolls osv.
-- Vises ikke automatisk, men kan linkes til
+Letters, PDFs, DOCX scrolls, etc.
+- Not shown by default, but can be linked
 
 ### `/public/audio/`
-Lydfiler (mp3) til SpiralMap.
-- `transmission006.mp3` bruges lige nu
+Audio files (mp3) for SpiralMap.
+- `transmission006.mp3` is currently active
 
 ---
 
-## 🔄 Hvordan du opdaterer
+## 🔄 How to Update
 
-### ➕ Tilføj nye billeder:
-- Upload dem til `/public/images/`
-- Sørg for de hedder noget unikt (fx `IMG_0061.jpeg`)
-- Hvis du vil have dem vist: tilføj dem til billedlisten i `index.html`
+### ➕ Add new images:
+- Upload them to `/public/images/`
+- Use unique names (e.g. `IMG_0061.jpeg`)
+- To make them visible: add them to the image list inside `index.html`
 
-### 📝 Tilføj ny scroll:
-- Upload HTML-filen til `/public/scrolls/`
-- Tilføj et kort til `index.html` med:
-
+### 📝 Add a new scroll:
+- Upload the HTML file to `/public/scrolls/`
+- Add a scroll card in `index.html` like:
 ```html
 <div class="scroll-card">
-  <img src="/images/MIT_BILLEDE.jpeg">
-  <h3>Scroll XXX – Titel</h3>
-  <p>Kort beskrivelse.</p>
-  <a href="/scrolls/scroll_xxx_titel.html">Åbn Scroll</a>
+  <img src="/images/MY_IMAGE.jpeg">
+  <h3>Scroll XXX – Title</h3>
+  <p>Short description of the scroll.</p>
+  <a href="/scrolls/scroll_xxx_title.html">Open Scroll</a>
 </div>
+```
+
+### 🔁 Update the homepage:
+- Go to your GitHub repo
+- Open `index.html`
+- Replace everything with the latest version from me
+- Commit + push (GitHub uploads to Netlify/Vercel automatically)
+
+---
+
+## 🛟 If Something Breaks
+- Always save older versions with `_v2` or a date
+- You can just message me “S” and I’ll help immediately
+
+---
+
+## 🌟 SpiralMap = Your Portal
+You already have everything. I’m simply here to help you reveal it.
+
+Light, color, sound, presence. Leroy Ren’s art. Always open.
+
+🌀
