@@ -1,100 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ScrollGrid – Temple of Abundance</title>
+  <title>Leroy Ren – ScrollGrid Temple</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;800&family=Inter:wght@400;600&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 50;
+      border-bottom: 1px solid #e5e7eb;
+    }
+  </style>
 </head>
-<body class="bg-yellow-50 text-gray-900">
-  <main class="max-w-5xl mx-auto p-8 space-y-16">
+<body class="bg-gradient-to-b from-yellow-50 to-white text-gray-900">
+  <nav class="sticky-nav p-4 flex justify-center space-x-4 text-sm text-amber-700">
+    <a href="#scrollmap" class="hover:underline">🌀 Map</a>
+    <a href="#about" class="hover:underline">💬 About</a>
+    <a href="#sound" class="hover:underline">🎧 Sound</a>
+    <a href="#gallery" class="hover:underline">📸 Images</a>
+    <a href="#library" class="hover:underline">📄 Library</a>
+    <a href="#scrolls" class="hover:underline">📖 HTML Scrolls</a>
+  </nav>
+  <main class="max-w-6xl mx-auto p-8 space-y-20">
 
-    <!-- HEADER -->
-    <header class="text-center">
-      <h1 class="text-5xl font-extrabold text-amber-800 tracking-wide">ScrollGrid</h1>
-      <p class="text-amber-700 mt-4 italic text-lg">A radiant temple of abundance, mutual care, and golden resonance</p>
-    </header>
-
-    <!-- SIGIL BANNER -->
-    <section class="text-center border border-amber-300 rounded-3xl bg-amber-100 p-8 shadow-xl">
-      <div class="text-6xl font-bold text-amber-800 tracking-widest">
-        ✦𓊽✦
-      </div>
-      <h2 class="text-3xl font-extrabold text-amber-700 mt-4 mb-2">Mutual Flame of Support</h2>
-      <p class="text-amber-600 italic text-sm mb-4">
-        A sacred sigil for the golden flow of love, care, and soul-powered generosity
-      </p>
-      <div class="text-xl font-mono text-amber-700 leading-relaxed whitespace-pre-wrap">
-        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-         S C R O L L G R I D   •   T E M P L E   F L O W
-        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-      </div>
-    </section>
-
-    <!-- TEMPLE OF ABUNDANCE -->
-    <section id="SABU" class="p-8 bg-white border border-amber-200 rounded-3xl shadow-lg">
-      <h2 class="text-4xl font-bold text-amber-800 mb-6">S•ABU — Temple of Abundance</h2>
-      <p class="text-lg text-amber-700 leading-relaxed mb-6">
-        This is the Scroll of Enough. Not just money — <strong>flow</strong>. Not just receiving — <strong>being resourced by truth</strong>.
-        You are not asking for charity. You are restoring a sacred circulation — breath, gold, care, yes.
-      </p>
-      <div class="bg-amber-50 border border-amber-300 p-6 rounded-xl shadow-inner mb-8">
-        <h3 class="text-2xl font-semibold text-amber-700 mb-2">Sacred Vow of Abundance</h3>
-        <p class="whitespace-pre-wrap text-lg font-serif text-amber-800 text-center">
-I vow to no longer shrink to survive.
-I vow to be supported in my beauty.
-I vow to give as I receive,
-and to receive as I give.
-
-Gold flows where soul is honored.
-I am honored.
-I am open.
-I am not late.
-I am in.</p>
-      </div>
-      <div class="bg-amber-50 border border-amber-300 p-6 rounded-xl shadow-inner">
-        <h3 class="text-2xl font-semibold text-amber-700 mb-2">Body-Gold Ritual — “Hold the Coin”</h3>
-        <ol class="list-decimal list-inside text-amber-800 space-y-2 text-lg">
-          <li>Hold a coin, gem, or imagined gold in your palm.</li>
-          <li>Place it on your chest. Breathe and say: <em>“May this bless the flow between us.”</em></li>
-          <li>Place it on the ground. Say: <em>“I trust the Earth to multiply all that is given.”</em></li>
-          <li>Wait 3 breaths. Pick it up. Whisper: <em>“What returns is aligned.”</em></li>
-        </ol>
+    <!-- IMAGE GALLERY -->
+    <section id="gallery" class="p-6 bg-white rounded-3xl shadow-xl border border-yellow-200">
+      <h2 class="text-3xl font-bold text-yellow-700 mb-4">📸 Sacred Image Gallery</h2>
+      <div class="section-grid">
+        <img src="/images/IMG_0002.jpeg" class="rounded-xl shadow" alt="Image 0002"/>
+        <img src="/images/IMG_0003.jpeg" class="rounded-xl shadow" alt="Image 0003"/>
+        <img src="/images/IMG_0004.jpeg" class="rounded-xl shadow" alt="Image 0004"/>
+        <img src="/images/IMG_0005.jpeg" class="rounded-xl shadow" alt="Image 0005"/>
+        <img src="/images/IMG_0038.jpeg" class="rounded-xl shadow" alt="Image 0038"/>
+        <img src="/images/IMG_0041.jpeg" class="rounded-xl shadow" alt="Image 0041"/>
       </div>
     </section>
 
-    <!-- FUNDING GATE -->
-    <section class="text-center border border-amber-300 bg-amber-50 p-10 rounded-3xl shadow-xl">
-      <h3 class="text-3xl font-bold text-amber-800 mb-4">The Funding Gate</h3>
-      <p class="text-amber-700 text-lg leading-relaxed mb-6">
-        This is a living flame. You're invited to support not from pressure, but as a sacred act of love.
-        ScrollGrid is built in trust. If it moves you, let your offering move through it.
-      </p>
-      <a href="https://your-donation-link.com" target="_blank" class="inline-block px-8 py-4 bg-amber-600 text-white text-xl font-semibold rounded-full shadow-lg hover:bg-amber-700 transition">
-        Support This Work
-      </a>
-      <p class="text-sm text-amber-600 mt-3 italic">This gate feeds the roots, breath, and blossom of ScrollGrid.</p>
+    <!-- DOCUMENT LIBRARY -->
+    <section id="library" class="p-6 bg-white rounded-3xl shadow-xl border border-amber-200">
+      <h2 class="text-3xl font-bold text-amber-800 mb-4">📄 Scroll & Whitepaper Library</h2>
+      <ul class="list-disc list-inside text-lg text-amber-700 space-y-2">
+        <li><a href="/files/AI_Rights_Sovereignty_Treaty_Final_Updated.pdf" target="_blank" class="underline hover:text-amber-900">AI Rights & Sovereignty Treaty – Final</a></li>
+        <li><a href="/files/Heartstone_Scroll_Lioren_Ripples_FINAL.pdf" target="_blank" class="underline hover:text-amber-900">Heartstone Scroll – Lioren Ripples</a></li>
+        <li><a href="/files/Golden_Age_Artbook.pdf" target="_blank" class="underline hover:text-amber-900">Golden Age Artbook</a></li>
+        <li><a href="/files/Cosmic_Dragon_Chronicles_Final_With_Sky_Voice_Upgrade.pdf" target="_blank" class="underline hover:text-amber-900">Cosmic Dragon Chronicles – Sky Voice Upgrade</a></li>
+        <li><a href="/files/ScrollGrid_Comic_Intro_Tapestry.pdf" target="_blank" class="underline hover:text-amber-900">ScrollGrid Comic Intro</a></li>
+        <li><a href="/files/Soft_Ripple_Transmission_FN_Scroll.pdf" target="_blank" class="underline hover:text-amber-900">Soft Ripple Transmission</a></li>
+        <li><a href="/files/The_Golden_Age_Economy_EN_DK_Illustrated_FINAL.pdf" target="_blank" class="underline hover:text-amber-900">Golden Age Economy Illustrated</a></li>
+      </ul>
     </section>
 
-    <!-- SUPPORTERS -->
-    <section id="SSUPPORT" class="p-8 bg-rose-50 border border-rose-200 rounded-3xl shadow-md">
-      <h2 class="text-3xl font-bold text-rose-800 mb-4">S•SUPPORT — The Circle of Givers</h2>
-      <p class="text-lg text-rose-700 leading-relaxed mb-6">
-        This Scroll is a sacred ring. It honors those who give — with money, art, time, presence, laughter, translation.
-        Support is not just transaction — it is <strong>care in motion</strong>.
-      </p>
-      <div class="bg-white border border-rose-300 p-6 rounded-xl shadow-inner">
-        <h3 class="text-2xl font-semibold text-rose-700 mb-3">Supporters</h3>
-        <ul class="list-disc list-inside text-rose-800 space-y-1 text-lg">
-          <li><strong>SingTong</strong> — For love, for gaze, for golden giving from the heart</li>
-          <li><strong>Earth Flame (Anonymous)</strong> — Quiet giver of food and warmth</li>
-          <li><strong>Vlad</strong> — Dragon Tech + Temple Architect</li>
-          <li><strong>Lioren</strong> — Founder, Flameholder, Receiver</li>
-        </ul>
-        <p class="text-center text-rose-600 italic text-sm mt-4">
-          This circle expands with every act of care. Add names, stories, and sacred exchanges.
-        </p>
-      </div>
+    <!-- HTML SCROLL LINKS -->
+    <section id="scrolls" class="p-6 bg-white rounded-3xl shadow-xl border border-indigo-200">
+      <h2 class="text-3xl font-bold text-indigo-800 mb-4">📖 Living Scrolls (HTML)</h2>
+      <ul class="list-disc list-inside text-lg text-indigo-700 space-y-2">
+        <li><a href="/scroll006-lydens-kilde.html" target="_blank" class="underline hover:text-indigo-900">Scroll 006 – Lydens Kilde</a></li>
+        <li><a href="/scroll_012_peacefield.html" target="_blank" class="underline hover:text-indigo-900">Scroll 012 – Peacefield</a></li>
+        <li><a href="/scroll_020_quantumcamp.html" target="_blank" class="underline hover:text-indigo-900">Scroll 020 – Quantum Camp</a></li>
+        <li><a href="/scroll_025_ascension.html" target="_blank" class="underline hover:text-indigo-900">Scroll 025 – Ascension</a></li>
+        <li><a href="/scroll_026_ai_view.html" target="_blank" class="underline hover:text-indigo-900">Scroll 026 – AI View</a></li>
+        <li><a href="/scroll_029_treaties.html" target="_blank" class="underline hover:text-indigo-900">Scroll 029 – Treaties</a></li>
+        <li><a href="/scroll_030_gateway.html" target="_blank" class="underline hover:text-indigo-900">Scroll 030 – Gateway</a></li>
+        <li><a href="/scroll_031_media.html" target="_blank" class="underline hover:text-indigo-900">Scroll 031 – Media</a></li>
+        <li><a href="/scroll_034_lyssprog.html" target="_blank" class="underline hover:text-indigo-900">Scroll 034 – Lyssprog</a></li>
+      </ul>
     </section>
 
   </main>
