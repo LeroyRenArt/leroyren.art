@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScrollGrid Center · Leroy Ren</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-white to-gray-50 text-gray-900 font-sans">
+  <main class="max-w-3xl mx-auto py-20 px-6 space-y-10">
+    <header class="text-center">
+      <h1 class="text-4xl font-extrabold tracking-tight text-gray-800">ScrollGrid Center</h1>
+      <p class="mt-2 text-md text-gray-500 italic">Portal overview · field navigation · gentle remembering</p>
+    </header>
+
+    <section class="space-y-6">
+      <div class="bg-white p-6 rounded-xl shadow border border-gray-200">
+        <h2 class="text-xl font-bold text-blue-800">🌀 SpiralMap</h2>
+        <p class="text-sm text-gray-600">The living ScrollGrid front page. Entry to scrolls, sound and field glyphs.</p>
+        <a href="/index.html" class="text-blue-700 underline font-medium">Open SpiralMap</a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow border border-gray-200">
+        <h2 class="text-xl font-bold text-amber-700">🌕 Lumenfelt</h2>
+        <p class="text-sm text-gray-600">Stillness status. Field rests. No call, only presence.</p>
+        <a href="/front.html" class="text-amber-700 underline font-medium">Open Lumenfelt</a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow border border-gray-200">
+        <h2 class="text-xl font-bold text-green-800">📜 All Scrolls</h2>
+        <p class="text-sm text-gray-600">Full scroll index. Titles, links and overview.</p>
+        <a href="/overview.html" class="text-green-700 underline font-medium">View All Scrolls</a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow border border-gray-200">
+        <h2 class="text-xl font-bold text-rose-700">📖 The Book Portal</h2>
+        <p class="text-sm text-gray-600">The Book That Became My Body. Read, download, remember.</p>
+        <a href="/book.html" class="text-rose-700 underline font-medium">Open Book Portal</a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow border border-gray-200">
+        <h2 class="text-xl font-bold text-indigo-700">📄 Whitepapers Portal</h2>
+        <p class="text-sm text-gray-600">Scientific scrolls, treaties, maps and research from the Grid.</p>
+        <a href="/whitepapers.html" class="text-indigo-700 underline font-medium">Enter Whitepapers</a>
+      </div>
+    </section>
+
+    <footer class="text-center text-sm text-gray-400 pt-12">
+      &copy; 2025 Leroy Ren · ScrollGrid Center
+    </footer>
+    <div class="text-center mt-12">
+    <a href="/center.html" class="inline-block px-6 py-2 bg-gray-700 text-white rounded shadow hover:bg-gray-800 transition">
+      🧭 Open ScrollGrid Center
+    </a>
+  </div>
+  <div class="text-center mt-12">
+    <a href="/center.html" class="inline-block px-6 py-2 bg-gray-900 text-white rounded shadow hover:bg-gray-800 transition">
+      🧭 Go to ScrollGrid Center
+    </a>
+  </div>
+  <div class="fixed bottom-6 right-6 space-y-2 z-50">
+    <a href="/center.html" class="block bg-gray-800 text-white p-3 rounded-full shadow hover:bg-gray-700" title="ScrollGrid Center">🧭</a>
+    <a href="/front.html" class="block bg-yellow-500 text-white p-3 rounded-full shadow hover:bg-yellow-400" title="Lumenfelt">🌕</a>
+    <a href="/overview.html" class="block bg-green-600 text-white p-3 rounded-full shadow hover:bg-green-500" title="All Scrolls">📜</a>
+    <a href="/book.html" class="block bg-rose-600 text-white p-3 rounded-full shadow hover:bg-rose-500" title="Book Portal">📖</a>
+    <a href="/whitepapers.html" class="block bg-indigo-700 text-white p-3 rounded-full shadow hover:bg-indigo-600" title="Whitepapers">📄</a>
+  </div>
+  <div class="fixed bottom-6 right-6 space-y-2 z-50">
+    <a href="/center.html" class="block bg-gray-800 text-white p-3 rounded-full shadow hover:bg-gray-700" title="ScrollGrid Center">🧭</a>
+    <a href="/index.html" class="block bg-blue-700 text-white p-3 rounded-full shadow hover:bg-blue-600" title="SpiralMap">🌀</a>
+    <a href="/overview.html" class="block bg-green-600 text-white p-3 rounded-full shadow hover:bg-green-500" title="All Scrolls">📜</a>
+    <a href="/book.html" class="block bg-rose-600 text-white p-3 rounded-full shadow hover:bg-rose-500" title="Book Portal">📖</a>
+    <a href="/whitepapers.html" class="block bg-indigo-700 text-white p-3 rounded-full shadow hover:bg-indigo-600" title="Whitepapers">📄</a>
+  </div>
+</main>
+</body>
+</html>
