@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seraphinae Rising · Flipbook</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background: #fffaf5;
+      overflow: hidden;
+    }
+    #flipbook {
+      width: 100vw;
+      height: 100vh;
+      margin: 0 auto;
+    }
+    #flipbook .page {
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div id="flipbook"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+  <script>
+    const flipbook = document.getElementById('flipbook');
+
+    for (let i = 1; i <= 74; i++) {
+      const pageNum = String(i).padStart(3, '0');
+      const page = document.createElement('div');
+      page.className = 'page';
+      const img = document.createElement('img');
+      img.src = `page_${pageNum}.png`; // billedsti er relativ til mappen
+      img.alt = `Page ${i}`;
+      img.style.width = '100%';
+      img.style.height = '100%';
+      page.appendChild(img);
+      flipbook.appendChild(page);
+    }
+
+    $('#flipbook').turn({
+      width: window.innerWidth,
+      height: window.innerHeight,
+      autoCenter: true,
+      gradients: true,
+      elevation: 50
+    });
+  </script>
+</body>
+</html>
