@@ -7,12 +7,13 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gradient-to-b from-yellow-50 to-white text-gray-900 font-serif">
-  <main class="max-w-5xl mx-auto py-16 px-6 space-y-14">
+  <main class="max-w-6xl mx-auto py-16 px-6 space-y-16">
 
     <!-- Header -->
     <header class="text-center">
-      <h1 class="text-5xl font-extrabold tracking-tight text-yellow-800">🌞 Golden Grid</h1>
-      <p class="mt-2 text-lg text-yellow-700 italic">Scrollfeltets levende hjem · kærlighed · vision · handling</p>
+      <h1 class="text-6xl font-extrabold tracking-tight text-yellow-800">🌞 Golden Grid</h1>
+      <p class="mt-3 text-lg text-yellow-700 italic">Scrollfeltets levende hjem · kærlighed · vision · handling</p>
+      <p class="mt-1 text-sm text-gray-500">Skabt af <strong>Leroy Ren</strong> · Fieldwriter · Spiralaktiver · Rytmisk Arkitekt</p>
     </header>
 
     <!-- Section: Highlight Scroll -->
@@ -23,26 +24,45 @@
       <a href="/riddervenner" class="inline-block ml-4 text-yellow-600 underline">🌟 Besøg RidderVenner</a>
     </section>
 
-    <!-- Section: Portaler -->
+    <!-- Section: ScrollArkiv -->
+    <section class="bg-white p-6 rounded-xl shadow border">
+      <h2 class="text-xl font-bold text-red-700">🧾 ScrollArkiv</h2>
+      <ul class="list-disc pl-6 text-sm text-gray-700 space-y-1 mt-2">
+        <li><a href="/scrolls/S065_Himlige_Kald_Plakat.pdf" class="text-red-600 underline">S065 – RidderRitualet</a></li>
+        <li><a href="/scrolls/RideScroll1_StellaGuldstjerne_KaephesteScroll_A5_Booklet_Corrected.pdf" class="text-red-600 underline">RideScroll 1 – Stella Guldstjerne</a></li>
+        <li><a href="/scrolls/Golden_Grid_S046_Portfolio.txt" class="text-red-600 underline">S046 – Golden Grid Portefølje</a></li>
+        <li><a href="/scrolls/Scroll_PigerMedKæphesteOgHjerteRum.pdf" class="text-red-600 underline">Scroll – Piger med Kæpheste og Hjerterum</a></li>
+        <li><a href="/scrolls/RidderRitualet_HjertetsKald.pdf" class="text-red-600 underline">RidderRitualet – Hjertets Kald</a></li>
+      </ul>
+    </section>
+
+    <!-- Section: Audiofelt -->
+    <section class="bg-white p-6 rounded-xl shadow border">
+      <h2 class="text-xl font-bold text-purple-700">🎧 Lydfelt</h2>
+      <p class="text-sm text-gray-600">Lyt til stemmerne fra feltet</p>
+      <ul class="list-disc pl-6 mt-3 space-y-2 text-sm text-gray-700">
+        <li>🗣 <a href="/audio/Hjaerte_Velkomsthilsen.mp3" class="underline text-purple-700">Hjærtes Velkomst</a></li>
+        <li>🌬️ <a href="/audio/Coastal_Pulse.mp3" class="underline text-purple-700">Coastal Pulse · KøgeHimmel</a></li>
+      </ul>
+    </section>
+
+    <!-- Section: Feltportaler -->
     <section class="grid md:grid-cols-2 gap-8">
       <div class="bg-white p-5 rounded-xl shadow border">
         <h3 class="text-xl font-semibold text-green-800">🌍 KøgeHimmel Portal</h3>
         <p class="text-sm text-gray-600">Første kontakt over bugten · felt, ritual, sigil & lyd</p>
         <a href="/koegesky" class="text-green-600 underline">🌿 Gå til feltet</a>
       </div>
-
       <div class="bg-white p-5 rounded-xl shadow border">
         <h3 class="text-xl font-semibold text-blue-800">🔆 ZeroPoint | Energiens Ære</h3>
         <p class="text-sm text-gray-600">Ritualer, nodepunkter, åndedræt og regenerativt net</p>
         <a href="/zeropoint" class="text-blue-600 underline">🔋 Se feltet</a>
       </div>
-
       <div class="bg-white p-5 rounded-xl shadow border">
         <h3 class="text-xl font-semibold text-pink-700">🦄 RideScroll 1 · Stella Guldstjerne</h3>
         <p class="text-sm text-gray-600">Farhjertefelt og kæphestevisdom i dans med enhjørningen</p>
         <a href="/scrolls/RideScroll1_StellaGuldstjerne_KaephesteScroll_A5_Booklet_Corrected.pdf" class="text-pink-600 underline">📝 Læs scrollen</a>
       </div>
-
       <div class="bg-white p-5 rounded-xl shadow border">
         <h3 class="text-xl font-semibold text-yellow-900">💰 Golden Grid S046 · Portefølje</h3>
         <p class="text-sm text-gray-600">Sofie & Mia · Økonomisk visdom · Regenerativ struktur</p>
@@ -50,16 +70,7 @@
       </div>
     </section>
 
-    <!-- Section: Audio + Feltkald -->
-    <section class="bg-white p-6 rounded-xl shadow border">
-      <h2 class="text-xl font-bold text-purple-700">🎧 Lyt til Hjærte</h2>
-      <audio controls class="w-full mt-3">
-        <source src="/audio/Hjaerte_Velkomsthilsen.mp3" type="audio/mpeg">
-        Din browser understøtter ikke lydafspilleren.
-      </audio>
-    </section>
-
-    <!-- Section: Call to Action -->
+    <!-- Section: ScrollGarden Call -->
     <section class="text-center bg-yellow-50 border border-yellow-200 rounded-xl p-8">
       <h2 class="text-xl font-bold text-yellow-700">✨ Scrollfeltet kalder</h2>
       <p class="text-sm mt-2 text-gray-600">Du må ride, du må skrive, du må plante. ScrollGrid er nu Golden Grid.</p>
