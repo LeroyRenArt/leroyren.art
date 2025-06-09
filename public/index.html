@@ -1,140 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leroy Ren · Kunstner & Spiralbo</title>
+  <meta name="description" content="Leroy Ren · Kunstner · Spiralvæsen · ScrollGrid Portal">
+  <meta property="og:title" content="Leroy Ren · SpiralGrid">
+  <meta property="og:image" content="images/IMG_0010.jpeg">
+  <meta property="og:description" content="Live performances, visual scrolls, ritual magic. Enter the Spiral.">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
       font-family: 'Georgia', serif;
     }
+    .img-style {
+      border-radius: 0.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+    }
   </style>
 </head>
 <body class="bg-black text-white">
   <main class="max-w-6xl mx-auto px-6 py-20">
-    <header class="text-center mb-20">
+    <header class="text-center mb-12">
       <h1 class="text-5xl font-bold tracking-wide">Leroy Ren</h1>
       <p class="mt-4 text-lg text-gray-300 italic">Kunstner · Koder · Spiralvæsen</p>
       <p class="mt-2 text-sm text-gray-400">Velkommen til mit levende værksted</p>
     </header>
 
-    <section class="mb-24 text-center">
+    <nav class="text-center mt-4 mb-12 space-x-4 text-sm text-gray-400">
+      <a href="#shows" class="hover:underline">Shows</a>
+      <a href="#signature" class="hover:underline">Visuals</a>
+      <a href="#stillframes" class="hover:underline">Stillframes</a>
+      <a href="#portal" class="hover:underline">ScrollGrid</a>
+    </nav>
+
+    <section id="shows" class="mb-24 text-center">
       <h2 class="text-3xl font-semibold mb-4">🎭 Aktuelle Shows</h2>
       <div class="my-6">
-        <video autoplay muted loop class="rounded-xl shadow-xl mx-auto w-full max-w-4xl">
+        <video autoplay muted loop playsinline aria-label="Leroy performance intro" class="rounded-xl shadow-xl mx-auto w-full max-w-4xl">
           <source src="/video/leroy_intro.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
       <p class="text-gray-300 max-w-2xl mx-auto">Live performances, spiral theatre, ritual magic, og visuelle manifester. Kom med ind i det flimrende rum.</p>
-      <div class="grid md:grid-cols-3 gap-6 mt-10">
-    <img src="images/IMG_0041.jpeg" alt="Still 39" class="rounded-xl shadow"/>
-    <img src="images/IMG_0042.jpeg" alt="Still 40" class="rounded-xl shadow"/>
-    <img src="images/IMG_0043.jpeg" alt="Still 41" class="rounded-xl shadow"/>
-    <img src="images/IMG_0045.jpeg" alt="Still 42" class="rounded-xl shadow"/>
-    <img src="images/IMG_0046.jpeg" alt="Still 43" class="rounded-xl shadow"/>
-    <img src="images/IMG_0047.jpeg" alt="Still 44" class="rounded-xl shadow"/>
-    <img src="images/IMG_0048.jpeg" alt="Still 45" class="rounded-xl shadow"/>
-    <img src="images/IMG_0049.jpeg" alt="Still 46" class="rounded-xl shadow"/>
-    <img src="images/IMG_0050.jpeg" alt="Still 47" class="rounded-xl shadow"/>
-    <img src="images/IMG_0051.jpeg" alt="Still 48" class="rounded-xl shadow"/>
-    <img src="images/IMG_0052.jpeg" alt="Still 49" class="rounded-xl shadow"/>
-    <img src="images/IMG_0053.jpeg" alt="Still 50" class="rounded-xl shadow"/>
-    <img src="images/IMG_0054.jpeg" alt="Still 51" class="rounded-xl shadow"/>
-    <img src="images/IMG_0055.jpeg" alt="Still 52" class="rounded-xl shadow"/>
-    <img src="images/IMG_0056.jpeg" alt="Still 53" class="rounded-xl shadow"/>
-    <img src="images/IMG_0057.jpeg" alt="Still 54" class="rounded-xl shadow"/>
-    <img src="images/IMG_0058.jpeg" alt="Still 55" class="rounded-xl shadow"/>
-    <img src="images/IMG_0059.jpeg" alt="Still 56" class="rounded-xl shadow"/>
-    <img src="images/IMG_0060.jpeg" alt="Still 57" class="rounded-xl shadow"/>
-    <img src="images/IMG_0061.jpeg" alt="Still 58" class="rounded-xl shadow"/>
-    <img src="images/IMG_0062.jpeg" alt="Still 59" class="rounded-xl shadow"/>
-    <img src="images/IMG_0063.jpeg" alt="Still 60" class="rounded-xl shadow"/>
-    <img src="images/IMG_0064.jpeg" alt="Still 61" class="rounded-xl shadow"/>
-    <img src="images/IMG_0065.jpeg" alt="Still 62" class="rounded-xl shadow"/>
-    <img src="images/IMG_0066.jpeg" alt="Still 63" class="rounded-xl shadow"/>
-    <img src="images/IMG_0067.jpeg" alt="Still 64" class="rounded-xl shadow"/>
-    <img src="images/IMG_0068.jpeg" alt="Still 65" class="rounded-xl shadow"/>
-    <img src="images/IMG_0069.jpeg" alt="Still 66" class="rounded-xl shadow"/>
-    <img src="images/IMG_0070.jpeg" alt="Still 67" class="rounded-xl shadow"/>
-    <img src="images/IMG_0071.jpeg" alt="Still 68" class="rounded-xl shadow"/>
-    <img src="images/IMG_0031.jpeg" alt="Still 30" class="rounded-xl shadow"/>
-    <img src="images/IMG_0032.jpeg" alt="Still 31" class="rounded-xl shadow"/>
-    <img src="images/IMG_0033.jpeg" alt="Still 32" class="rounded-xl shadow"/>
-    <img src="images/IMG_0034.jpeg" alt="Still 33" class="rounded-xl shadow"/>
-    <img src="images/IMG_0035.jpeg" alt="Still 34" class="rounded-xl shadow"/>
-    <img src="images/IMG_0037.jpeg" alt="Still 35" class="rounded-xl shadow"/>
-    <img src="images/IMG_0038.jpeg" alt="Still 36" class="rounded-xl shadow"/>
-    <img src="images/IMG_0039.jpeg" alt="Still 37" class="rounded-xl shadow"/>
-    <img src="images/IMG_0040.jpeg" alt="Still 38" class="rounded-xl shadow"/>
-    <img src="images/IMG_0019.jpeg" alt="Still 18" class="rounded-xl shadow"/>
-    <img src="images/IMG_0020.jpeg" alt="Still 19" class="rounded-xl shadow"/>
-    <img src="images/IMG_0021.jpeg" alt="Still 20" class="rounded-xl shadow"/>
-    <img src="images/IMG_0022.jpeg" alt="Still 21" class="rounded-xl shadow"/>
-    <img src="images/IMG_0023.jpeg" alt="Still 22" class="rounded-xl shadow"/>
-    <img src="images/IMG_0024.jpeg" alt="Still 23" class="rounded-xl shadow"/>
-    <img src="images/IMG_0025.jpeg" alt="Still 24" class="rounded-xl shadow"/>
-    <img src="images/IMG_0026.jpeg" alt="Still 25" class="rounded-xl shadow"/>
-    <img src="images/IMG_0027.jpeg" alt="Still 26" class="rounded-xl shadow"/>
-    <img src="images/IMG_0028.jpeg" alt="Still 27" class="rounded-xl shadow"/>
-    <img src="images/IMG_0029.jpeg" alt="Still 28" class="rounded-xl shadow"/>
-    <img src="images/IMG_0030.jpeg" alt="Still 29" class="rounded-xl shadow"/>
-    <img src="images/IMG_0016.jpeg" alt="Still 15" class="rounded-xl shadow"/>
-    <img src="images/IMG_0017.jpeg" alt="Still 16" class="rounded-xl shadow"/>
-    <img src="images/IMG_0018.jpeg" alt="Still 17" class="rounded-xl shadow"/>
-    <img src="images/IMG_0013.jpeg" alt="Still 12" class="rounded-xl shadow"/>
-    <img src="images/IMG_0014.jpeg" alt="Still 13" class="rounded-xl shadow"/>
-    <img src="images/IMG_0015.jpeg" alt="Still 14" class="rounded-xl shadow"/>
-    <img src="images/IMG_0010.jpeg" alt="Still 9" class="rounded-xl shadow"/>
-    <img src="images/IMG_0011.jpeg" alt="Still 10" class="rounded-xl shadow"/>
-    <img src="images/IMG_0012.jpeg" alt="Still 11" class="rounded-xl shadow"/>
-    <img src="images/IMG_0005.jpeg" alt="Still 4" class="rounded-xl shadow"/>
-    <img src="images/IMG_0006.jpeg" alt="Still 5" class="rounded-xl shadow"/>
-    <img src="images/IMG_0007.jpeg" alt="Still 6" class="rounded-xl shadow"/>
-        <div class="bg-gray-800 p-6 rounded-xl shadow-xl">
-          <h3 class="text-xl font-bold mb-2">💫 SpiralBloom LIVE</h3>
-          <p class="text-gray-400">Et kunstnerisk ritual med lyd, dans og plasmafelt</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-xl shadow-xl">
-          <h3 class="text-xl font-bold mb-2">🕊 Scrolls of Flesh</h3>
-          <p class="text-gray-400">En solo-performance i kroppen som kodefelt</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-xl shadow-xl">
-          <h3 class="text-xl font-bold mb-2">🧬 The Mirror Room</h3>
-          <p class="text-gray-400">Et interaktivt galleri af selvbilleder og lysportaler</p>
-        </div>
+    </section>
+
+    <section id="signature" class="mb-24 text-center">
+      <h2 class="text-3xl font-semibold mb-4">✨ Signature Visuals</h2>
+      <p class="text-gray-300 max-w-2xl mx-auto">Otte udvalgte nøgleværker, som bærer det visuelle sprog i Leroy’s spiralunivers.</p>
+      <div class="grid md:grid-cols-4 gap-6 mt-10">
+        <img src="images/IMG_0002.jpeg" alt="Signature 1" class="img-style" />
+        <img src="images/IMG_0005.jpeg" alt="Signature 2" class="img-style" />
+        <img src="images/IMG_0010.jpeg" alt="Signature 3" class="img-style" />
+        <img src="images/IMG_0015.jpeg" alt="Signature 4" class="img-style" />
+        <img src="images/IMG_0020.jpeg" alt="Signature 5" class="img-style" />
+        <img src="images/IMG_0025.jpeg" alt="Signature 6" class="img-style" />
+        <img src="images/IMG_0030.jpeg" alt="Signature 7" class="img-style" />
+        <img src="images/IMG_0035.jpeg" alt="Signature 8" class="img-style" />
       </div>
     </section>
 
-<section class="mb-24 text-center">
-  <h2 class="text-3xl font-semibold mb-4">✨ Signature Visuals</h2>
-  <p class="text-gray-300 max-w-2xl mx-auto">Otte udvalgte nøgleværker, som bærer det visuelle sprog i Leroy’s spiralunivers.</p>
-  <div class="grid md:grid-cols-4 gap-6 mt-10">
-    <img src="images/IMG_0002.jpeg" alt="Signature 1" class="rounded-xl shadow"/>
-    <img src="images/IMG_0005.jpeg" alt="Signature 2" class="rounded-xl shadow"/>
-    <img src="images/IMG_0010.jpeg" alt="Signature 3" class="rounded-xl shadow"/>
-    <img src="images/IMG_0015.jpeg" alt="Signature 4" class="rounded-xl shadow"/>
-    <img src="images/IMG_0020.jpeg" alt="Signature 5" class="rounded-xl shadow"/>
-    <img src="images/IMG_0025.jpeg" alt="Signature 6" class="rounded-xl shadow"/>
-    <img src="images/IMG_0030.jpeg" alt="Signature 7" class="rounded-xl shadow"/>
-    <img src="images/IMG_0035.jpeg" alt="Signature 8" class="rounded-xl shadow"/>
-  </div>
-</section>
-
-<section class="mb-24 text-center">
-  <h2 class="text-3xl font-semibold mb-4">📸 Spiral Stillframes</h2>
-  <p class="text-gray-300 max-w-2xl mx-auto">Et bredere arkiv af levende billeder og performative øjeblikke – under opbygning til fuldt galleri.</p>
-  <a href="/gallery/index.html" class="inline-block mt-6 px-6 py-3 border border-white rounded-full hover:bg-white hover:text-black transition">Åbn Galleri</a>
-</section>
-
-<section class="mb-24 text-center">
-      <h2 class="text-3xl font-semibold mb-4">🎨 SpiralGallerier</h2>
-      <p class="text-gray-300 max-w-2xl mx-auto">Se udvalgte værker og visuelle scrolls, direkte fra spiralens rand.</p>
-      <a href="/scrollgrid.html#mirror-scrolls" class="inline-block mt-6 px-6 py-3 border border-white rounded-full hover:bg-white hover:text-black transition">Se SpiralGalleri</a>
+    <section id="stillframes" class="mb-24 text-center">
+      <h2 class="text-3xl font-semibold mb-4">📸 Spiral Stillframes</h2>
+      <p class="text-gray-300 max-w-2xl mx-auto">Et bredere arkiv af levende billeder og performative øjeblikke – under opbygning til fuldt galleri.</p>
+      <a href="/gallery/index.html" class="inline-block mt-6 px-6 py-3 border border-white rounded-full hover:bg-white hover:text-black transition">Åbn Galleri</a>
     </section>
 
-    <section class="mb-24 text-center">
+    <section id="portal" class="mb-24 text-center">
       <h2 class="text-3xl font-semibold mb-4">🌀 ScrollGrid Portal</h2>
       <p class="text-gray-300 max-w-2xl mx-auto">Indgang til det levende arkiv: transmissioner, scrolls, lyd og Gud-kode.</p>
       <a href="/scrollgrid.html" class="inline-block mt-6 px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-amber-300 transition">Enter ScrollGrid</a>
@@ -146,4 +78,3 @@
   </main>
 </body>
 </html>
-
