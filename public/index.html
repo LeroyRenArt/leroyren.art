@@ -26,55 +26,61 @@
   </main>
   <script>
     const imageFolder = 'images/gallery/all/'; // Place all images here
-    const totalImages = 96; // Adjust to your total image count
     const imagesPerFloor = 12;
     const galleryContainer = document.getElementById('gallery-container');
 
-    for (let floor = 0; floor < Math.ceil(totalImages / imagesPerFloor); floor++) {
-      const floorSection = document.createElement('section');
-      floorSection.className = 'mb-24';
+    fetch(imageFolder + 'manifest.json')
+      .then(response => response.json())
+      .then(imageList => {
+        const totalImages = imageList.length;
+        for (let floor = 0; floor < Math.ceil(totalImages / imagesPerFloor); floor++) {
+          const floorSection = document.createElement('section');
+          floorSection.className = 'mb-24';
 
-      const header = document.createElement('h2');
-      header.className = 'text-3xl font-semibold mb-6 text-center';
-      header.textContent = `🌌 SpiralGallery · Floor ${floor + 1}`;
+          const header = document.createElement('h2');
+          header.className = 'text-3xl font-semibold mb-6 text-center';
+          header.textContent = `🌌 SpiralGallery · Floor ${floor + 1}`;
 
-      const grid = document.createElement('div');
-      grid.className = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4';
+          const grid = document.createElement('div');
+          grid.className = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4';
 
-      for (let i = 0; i < imagesPerFloor; i++) {
-        const imageIndex = floor * imagesPerFloor + i + 1;
-        if (imageIndex > totalImages) break;
+          for (let i = 0; i < imagesPerFloor; i++) {
+            const imageIndex = floor * imagesPerFloor + i;
+            if (imageIndex >= totalImages) break;
 
-        const padded = imageIndex.toString().padStart(4, '0');
-        const filename = `IMG_${padded}.jpeg`; // Update if your filenames differ
+            const filename = imageList[imageIndex];
 
-        const wrapper = document.createElement('div');
-        wrapper.className = 'text-center';
+            const wrapper = document.createElement('div');
+            wrapper.className = 'text-center';
 
-        const link = document.createElement('a');
-        link.href = imageFolder + filename;
-        link.target = '_blank';
+            const link = document.createElement('a');
+            link.href = imageFolder + filename;
+            link.target = '_blank';
 
-        const img = document.createElement('img');
-        img.src = imageFolder + filename;
-        img.alt = filename;
-        img.loading = 'lazy';
-        img.className = 'rounded-lg shadow-md transition-transform duration-200 image-tile';
+            const img = document.createElement('img');
+            img.src = imageFolder + filename;
+            img.alt = filename;
+            img.loading = 'lazy';
+            img.className = 'rounded-lg shadow-md transition-transform duration-200 image-tile';
 
-        const caption = document.createElement('p');
-        caption.className = 'text-xs text-gray-400 mt-1';
-        caption.textContent = filename;
+            const caption = document.createElement('p');
+            caption.className = 'text-xs text-gray-400 mt-1';
+            caption.textContent = filename;
 
-        link.appendChild(img);
-        wrapper.appendChild(link);
-        wrapper.appendChild(caption);
-        grid.appendChild(wrapper);
-      }
+            link.appendChild(img);
+            wrapper.appendChild(link);
+            wrapper.appendChild(caption);
+            grid.appendChild(wrapper);
+          }
 
-      floorSection.appendChild(header);
-      floorSection.appendChild(grid);
-      galleryContainer.appendChild(floorSection);
-    }
+          floorSection.appendChild(header);
+          floorSection.appendChild(grid);
+          galleryContainer.appendChild(floorSection);
+        }
+      })
+      .catch(error => {
+        console.error('Error loading image manifest:', error);
+      });
   </script>
 </body>
 </html>
