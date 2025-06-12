@@ -19,13 +19,14 @@
 <body>
   <main class="max-w-6xl mx-auto px-6 py-12">
     <section class="text-center mb-12">
-      <h1 class="text-5xl font-bold mb-4">🌀 SpiralGallery · Dynamic Floor Viewer</h1>
-      <p class="text-gray-400 mb-6">Automatically displays images from a single folder, chunked into dynamic "floors" of 12 images per section.</p>
+      <h1 class="text-5xl font-bold mb-4">🌀 SpiralGallery · Full Dynamic Archive</h1>
+      <p class="text-gray-400 mb-6">All uploaded images will auto-display from <code>images/</code> using <code>manifest.json</code>. New images appear instantly, grouped by 12 per floor.</p>
     </section>
     <div id="gallery-container" class="space-y-24"></div>
-  </main>
+  <button onclick="generateManifest()" class="button-link block mx-auto mt-10">🧾 Generate manifest.json</button>
+</main>
   <script>
-    const imageFolder = 'images/gallery/all/'; // Place all images here
+    const imageFolder = 'images/';
     const imagesPerFloor = 12;
     const galleryContainer = document.getElementById('gallery-container');
 
@@ -81,6 +82,26 @@
       .catch(error => {
         console.error('Error loading image manifest:', error);
       });
-  </script>
+  function generateManifest() {
+  fetch(imageFolder)
+    .then(res => res.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const files = Array.from(doc.links)
+        .map(link => link.getAttribute('href'))
+        .filter(name => name && name.match(/\.(jpe?g|png|webp)$/i));
+      const manifestJson = JSON.stringify(files, null, 2);
+      const blob = new Blob([manifestJson], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'manifest.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+}
+</script>
 </body>
 </html>
