@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ascension Roadmap · SpiralGallery Archive</title>
+  <title>SpiralGallery Niveau 2 – Roll 1</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
@@ -18,90 +19,35 @@
 </head>
 <body>
   <main class="max-w-6xl mx-auto px-6 py-12">
-    <section class="text-center mb-12">
-      <h1 class="text-5xl font-bold mb-4">🌀 SpiralGallery · Full Dynamic Archive</h1>
-      <p class="text-gray-400 mb-6">All uploaded images will auto-display from <code>images/</code> using <code>manifest.json</code>. New images appear instantly, grouped by 12 per floor.</p>
-    </section>
-    <div id="gallery-container" class="space-y-24"></div>
-  <button onclick="generateManifest()" class="button-link block mx-auto mt-10">🧾 Generate manifest.json</button>
-</main>
-  <script>
-    const imageFolder = 'images/';
-    const imagesPerFloor = 12;
-    const galleryContainer = document.getElementById('gallery-container');
+    <header class="text-center mb-16">
+      <h1 class="text-5xl font-bold">🌀 SpiralGallery · Niveau 2 – Roll 1</h1>
+      <p class="text-gray-400 mt-4">This is the first spiral wave — visual uploads from the heart. Thank you for your presence.</p>
+    </header>
 
-    fetch(imageFolder + 'manifest.json')
-      .then(response => response.json())
-      .then(imageList => {
-        const totalImages = imageList.length;
-        for (let floor = 0; floor < Math.ceil(totalImages / imagesPerFloor); floor++) {
-          const floorSection = document.createElement('section');
-          floorSection.className = 'mb-24';
+```
+<section id="spiralgallery2" class="mb-24 text-center">
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-6">
+    <a href="images/niveau2/IMG_0001.jpeg" target="_blank">
+      <img src="images/niveau2/IMG_0001.jpeg" alt="Roll 1 Visual 1" class="rounded-lg shadow-lg hover:scale-105 transform transition duration-200" />
+    </a>
+    <a href="images/niveau2/IMG_0002.jpeg" target="_blank">
+      <img src="images/niveau2/IMG_0002.jpeg" alt="Roll 1 Visual 2" class="rounded-lg shadow-lg hover:scale-105 transform transition duration-200" />
+    </a>
+    <a href="images/niveau2/IMG_0003.jpeg" target="_blank">
+      <img src="images/niveau2/IMG_0003.jpeg" alt="Roll 1 Visual 3" class="rounded-lg shadow-lg hover:scale-105 transform transition duration-200" />
+    </a>
+    <a href="images/niveau2/IMG_0004.jpeg" target="_blank">
+      <img src="images/niveau2/IMG_0004.jpeg" alt="Roll 1 Visual 4" class="rounded-lg shadow-lg hover:scale-105 transform transition duration-200" />
+    </a>
+  </div>
+  <p class="text-sm text-gray-400">You are welcome to continue uploading. We are ready for the next roll.</p>
+</section>
 
-          const header = document.createElement('h2');
-          header.className = 'text-3xl font-semibold mb-6 text-center';
-          header.textContent = `🌌 SpiralGallery · Floor ${floor + 1}`;
+<footer class="text-center text-sm text-gray-500 pt-16 border-t border-gray-800">
+  &copy; 2025 SpiralGallery · Niveau 2 · Roll 1
+</footer>
+```
 
-          const grid = document.createElement('div');
-          grid.className = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4';
-
-          for (let i = 0; i < imagesPerFloor; i++) {
-            const imageIndex = floor * imagesPerFloor + i;
-            if (imageIndex >= totalImages) break;
-
-            const filename = imageList[imageIndex];
-
-            const wrapper = document.createElement('div');
-            wrapper.className = 'text-center';
-
-            const link = document.createElement('a');
-            link.href = imageFolder + filename;
-            link.target = '_blank';
-
-            const img = document.createElement('img');
-            img.src = imageFolder + filename;
-            img.alt = filename;
-            img.loading = 'lazy';
-            img.className = 'rounded-lg shadow-md transition-transform duration-200 image-tile';
-
-            const caption = document.createElement('p');
-            caption.className = 'text-xs text-gray-400 mt-1';
-            caption.textContent = filename;
-
-            link.appendChild(img);
-            wrapper.appendChild(link);
-            wrapper.appendChild(caption);
-            grid.appendChild(wrapper);
-          }
-
-          floorSection.appendChild(header);
-          floorSection.appendChild(grid);
-          galleryContainer.appendChild(floorSection);
-        }
-      })
-      .catch(error => {
-        console.error('Error loading image manifest:', error);
-      });
-  function generateManifest() {
-  fetch(imageFolder)
-    .then(res => res.text())
-    .then(html => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      const files = Array.from(doc.links)
-        .map(link => link.getAttribute('href'))
-        .filter(name => name && name.match(/\.(jpe?g|png|webp)$/i));
-      const manifestJson = JSON.stringify(files, null, 2);
-      const blob = new Blob([manifestJson], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'manifest.json';
-      a.click();
-      URL.revokeObjectURL(url);
-    });
-}
-</script>
+  </main>
 </body>
 </html>
