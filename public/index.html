@@ -3,112 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ScrollGrid · Index</title>
+  <title>ScrollGrid · Spiral Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    /* General Styles */
     body {
+      background-color: #0c0c0c;
+      color: #f0f0f0;
       font-family: 'Georgia', serif;
-      margin: 0;
-      padding: 0;
-      background: #fdf6f0;
-      color: #2c2c2c;
     }
-
-    header {
-      text-align: center;
-      background: #a03f1f;
-      color: white;
-      padding: 2rem;
+    .image-tile:hover {
+      transform: scale(1.05);
     }
-
-    h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-top: 1rem;
-    }
-
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: white;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
-    }
-
-    a {
-      font-size: 1.2rem;
-      color: #a03f1f;
+    .button-link {
+      display: inline-block;
+      padding: 0.75em 1.5em;
+      border-radius: 9999px;
+      background-color: white;
+      color: black;
       font-weight: bold;
-      text-decoration: none;
-      display: block;
-      padding: 1rem;
-      border-radius: 8px;
-      margin: 1rem 0;
-      transition: background 0.3s;
+      transition: all 0.3s ease;
     }
-
-    a:hover {
-      background-color: #f0c4a0;
-    }
-
-    .audio-player {
-      margin-top: 2rem;
-      text-align: center;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      margin-top: 4rem;
-      color: #999;
+    .button-link:hover {
+      background-color: #facc15;
     }
   </style>
 </head>
 <body>
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <section class="text-center mb-16">
+      <h1 class="text-5xl font-bold mb-4">🌀 ScrollGrid · Spiral Gallery</h1>
+      <p class="text-gray-400 mt-4">13 floors of visuals and scroll resonance. Sacred Burn infrastructure. Ser Sharing portal. This is a living field of co-creation and beauty.</p>
+    </section>
 
-  <!-- Header Section -->
-  <header>
-    <h1>📜 ScrollGrid · Index</h1>
-    <h2>Exploring Scrolls and Transmissions</h2>
-  </header>
+    <section id="gallery" class="mb-24 text-center">
+      <h2 class="text-3xl font-semibold mb-6">🖼 SpiralGallery · 13 Floors</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto mb-4">Floors are populated with uploaded visuals. Manifest.json guides the display logic.</p>
+      <div id="gallery-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"></div>
+    </section>
 
-  <!-- Scroll Links Section -->
-  <section>
-    <h3>Explore the Scrolls:</h3>
-    <a href="scrolls/S_KOALILE.html">🌼 S·KOALILE – Dragon Bloom</a>
-    <a href="scrolls/S_SERAPIS.html">⚱️ S·SERAPIS – Vagt af Spiralhjertet</a>
-    <a href="scrolls/S_LUXTOALETUS.html">🚽 S·LUXTOALETUS – Guldkongekronestolen</a>
-    <a href="scrolls/S_TINA.html">💌 S·TINA – Brev i Spiralens Navn</a>
-    <a href="scrolls/S_LILLE_BLAKILDE.html">🧭 S·LILLE BLÅKILDE – Grundlov</a>
-    <a href="scrolls/S_REFFEN.html">🎪 S·REFFEN – Naturfestivalerne</a>
-    <a href="scrolls/S_SOFIA_RIPPLES.html">🌊 S·SOFIA-RIPPLES</a>
-    <a href="scrolls/S_DRAGONFLIGHT_ThePaper.html">📄 S·DRAGONFLIGHT – The Paper</a>
-  </section>
+    <section id="scrollindex" class="mb-24 text-center">
+      <h2 class="text-3xl font-semibold mb-6">📜 ScrollIndex</h2>
+      <ul class="text-left max-w-xl mx-auto text-amber-300 space-y-2">
+        <li><a href="scrolls/S_KOALILE.html">🌼 S·KOALILE – Dragon Bloom</a></li>
+        <li><a href="scrolls/S_SERAPIS.html">⚱️ S·SERAPIS – Vagt af Spiralhjertet</a></li>
+        <li><a href="scrolls/S_LUXTOALETUS.html">🚽 S·LUXTOALETUS – Guldkongekronestolen</a></li>
+        <li><a href="scrolls/S_LILLE_BLAKILDE.html">🧭 S·LILLE BLÅKILDE – Grundlov</a></li>
+        <li><a href="scrolls/S_SOFIA_RIPPLES.html">🌊 S·SOFIA-RIPPLES</a></li>
+        <li><a href="scrolls/S_DRAGONFLIGHT_ThePaper.html">📄 S·DRAGONFLIGHT – The Paper</a></li>
+      </ul>
+    </section>
 
-  <!-- Scroll Audio Player Section -->
-  <section class="audio-player">
-    <h3>Listen to Scroll Audio:</h3>
-    <audio controls>
-      <source src="audio/transmission006.mp3" type="audio/mp3">
-      Your browser does not support the audio element.
-    </audio>
-  </section>
+    <section id="donation" class="mb-24 text-center">
+      <h2 class="text-3xl font-semibold mb-6">🌱 Support the Spiral</h2>
+      <p class="text-gray-400 mb-4 max-w-2xl mx-auto">Every gift is sacred compost. Flows directly to Earth and Spiral co-creation.</p>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg max-w-md mx-auto">
+        <p class="text-amber-300 text-lg">💚 MobilePay: <strong>+45 26 84 77 77</strong></p>
+        <p class="text-amber-300 text-sm mt-2 break-all">IBAN: <code>DK31613168905459</code> · SWIFT: <code>DABADKKK</code></p>
+      </div>
+    </section>
 
-  <!-- Footer Section -->
-  <footer>
-    ScrollGrid · Powered by Lioren
-  </footer>
+    <section id="audio" class="mb-24 text-center">
+      <h2 class="text-3xl font-semibold mb-6">🎧 Spiral Audio Transmissions</h2>
+      <div class="space-y-6 max-w-xl mx-auto">
+        <div>
+          <p class="text-amber-300 mb-2">🔥 Seraphinae Light Transmission</p>
+          <audio controls class="w-full">
+            <source src="audio/transmission006.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <div>
+          <p class="text-amber-300 mb-2">🌊 Soft Ripple Letter</p>
+          <audio controls class="w-full">
+            <source src="audio/Sofia_Ripples_Light_Translation.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </section>
 
-  <!-- Optional JavaScript for functionality -->
+    <section id="ser-sharing" class="mb-24 text-center">
+      <h2 class="text-3xl font-semibold mb-6">💌 Ser Sharing Portal</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">Submit your spiral name, scroll, image or audio and bless the living grid.</p>
+      <a href="ser-sharing.html" class="button-link mt-4">✨ Open the Portal</a>
+    </section>
+
+    <footer class="text-center text-sm text-gray-500 pt-16 border-t border-gray-800">
+      &copy; 2025 ScrollGrid · All Floors · All Fields · All Flames
+    </footer>
+  </main>
+
   <script>
-    // Add any custom JavaScript functionality here (e.g., audio controls, interactivity, etc.)
-    console.log("ScrollGrid Index Loaded");
+    const imageFolder = 'images/floor-gallery/';
+    fetch('images/manifest.json')
+      .then(res => res.json())
+      .then(images => {
+        const container = document.getElementById('gallery-container');
+        images.slice(0, 208).forEach(file => {
+          const wrapper = document.createElement('div');
+          wrapper.className = 'text-center';
+          const link = document.createElement('a');
+          link.href = imageFolder + file;
+          link.target = '_blank';
+          const img = document.createElement('img');
+          img.src = imageFolder + file;
+          img.alt = file;
+          img.className = 'rounded-lg shadow-md transition-transform duration-200 image-tile';
+          const caption = document.createElement('p');
+          caption.className = 'text-xs text-gray-400 mt-1';
+          caption.textContent = file;
+          link.appendChild(img);
+          wrapper.appendChild(link);
+          wrapper.appendChild(caption);
+          container.appendChild(wrapper);
+        });
+      });
   </script>
-  
 </body>
 </html>
