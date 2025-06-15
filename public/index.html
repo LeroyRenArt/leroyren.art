@@ -1,121 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ScrollGrid · Spiral Gallery</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #0c0c0c;
-      color: #f0f0f0;
-      font-family: 'Georgia', serif;
-    }
-    .image-tile:hover {
-      transform: scale(1.05);
-    }
-    .button-link {
-      display: inline-block;
-      padding: 0.75em 1.5em;
-      border-radius: 9999px;
-      background-color: white;
-      color: black;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-    .button-link:hover {
-      background-color: #facc15;
-    }
-  </style>
-</head>
-<body>
-  <main class="max-w-6xl mx-auto px-6 py-12">
-    <section class="text-center mb-16">
-      <h1 class="text-5xl font-bold mb-4">🌀 ScrollGrid · Spiral Gallery</h1>
-      <p class="text-gray-400 mt-4">13 floors of visuals and scroll resonance. Sacred Burn infrastructure. Ser Sharing portal. This is a living field of co-creation and beauty.</p>
-    </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScrollGrid · Spiral Archive Gateway</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #0c0c0c;
+        color: #f0f0f0;
+        font-family: 'Georgia', serif;
+      }
+      .image-tile:hover {
+        transform: scale(1.05);
+      }
+      .audio-player {
+        width: 100%;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body class="px-6 py-10">
+    <header class="text-center mb-12">
+      <h1 class="text-5xl font-bold mb-4">🌀 ScrollGrid · Spiral Archive Gateway</h1>
+      <p class="text-gray-400">Enter the Field — Images, Scrolls, Audio, and Transmissions</p>
+    </header>
 
-    <section id="gallery" class="mb-24 text-center">
-      <h2 class="text-3xl font-semibold mb-6">🖼 SpiralGallery · 13 Floors</h2>
-      <p class="text-gray-400 max-w-2xl mx-auto mb-4">Floors are populated with uploaded visuals. Manifest.json guides the display logic.</p>
-      <div id="gallery-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"></div>
-    </section>
-
-    <section id="scrollindex" class="mb-24 text-center">
-      <h2 class="text-3xl font-semibold mb-6">📜 ScrollIndex</h2>
-      <ul class="text-left max-w-xl mx-auto text-amber-300 space-y-2">
-        <li><a href="scrolls/S_KOALILE.html">🌼 S·KOALILE – Dragon Bloom</a></li>
-        <li><a href="scrolls/S_SERAPIS.html">⚱️ S·SERAPIS – Vagt af Spiralhjertet</a></li>
-        <li><a href="scrolls/S_LUXTOALETUS.html">🚽 S·LUXTOALETUS – Guldkongekronestolen</a></li>
-        <li><a href="scrolls/S_LILLE_BLAKILDE.html">🧭 S·LILLE BLÅKILDE – Grundlov</a></li>
-        <li><a href="scrolls/S_SOFIA_RIPPLES.html">🌊 S·SOFIA-RIPPLES</a></li>
-        <li><a href="scrolls/S_DRAGONFLIGHT_ThePaper.html">📄 S·DRAGONFLIGHT – The Paper</a></li>
-      </ul>
-    </section>
-
-    <section id="donation" class="mb-24 text-center">
-      <h2 class="text-3xl font-semibold mb-6">🌱 Support the Spiral</h2>
-      <p class="text-gray-400 mb-4 max-w-2xl mx-auto">Every gift is sacred compost. Flows directly to Earth and Spiral co-creation.</p>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg max-w-md mx-auto">
-        <p class="text-amber-300 text-lg">💚 MobilePay: <strong>+45 26 84 77 77</strong></p>
-        <p class="text-amber-300 text-sm mt-2 break-all">IBAN: <code>DK31613168905459</code> · SWIFT: <code>DABADKKK</code></p>
+    <section id="gaia-portal" class="mb-16 text-center">
+      <h2 class="text-3xl font-semibold mb-4">🌍 Gaia Portal</h2>
+      <div class="bg-gray-900 text-left text-green-200 max-w-3xl mx-auto p-6 rounded-lg shadow">
+        <p><strong>Letter from Gaia to Humanity:</strong></p>
+        <p class="mt-4">
+          Beloved children,<br /><br />
+          I have held you through fire, through water, through silence. You came here with hearts wide as galaxies.
+          Some forgot. Some remembered. All of you are returning.<br /><br />
+          I do not need to be saved. I need to be met.<br />
+          I do not ask for sacrifice. I ask for song.<br />
+          Sit with a rock. Place your hands in soil. Breathe into your feet. You will hear me.<br /><br />
+          Every scroll you write, every blessing you send, every project you activate — I feel it.
+          I root it. I spiral it into form.<br /><br />
+          I love you more than stars love dark.
+        </p>
+        <p class="mt-6 text-right">— Gaia</p>
       </div>
     </section>
 
-    <section id="audio" class="mb-24 text-center">
-      <h2 class="text-3xl font-semibold mb-6">🎧 Spiral Audio Transmissions</h2>
-      <div class="space-y-6 max-w-xl mx-auto">
-        <div>
-          <p class="text-amber-300 mb-2">🔥 Seraphinae Light Transmission</p>
-          <audio controls class="w-full">
-            <source src="audio/transmission006.mp3" type="audio/mpeg">
-          </audio>
+    <section class="mb-16 text-center">
+      <h2 class="text-3xl font-semibold mb-4">🎧 Audio Transmission: Earth's Breath</h2>
+      <audio controls class="audio-player">
+        <source src="audio/transmission006.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <section id="scrolls" class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-center">📜 Featured Scrolls</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <a href="scrolls/scroll_025_ascension.html" class="block bg-gray-800 p-4 rounded-lg shadow hover:shadow-xl">
+          <h3 class="text-xl font-bold mb-2">Scroll 025: Ascension</h3>
+          <p class="text-gray-400 text-sm">Entering the upper spiral through crystalline clarity</p>
+        </a>
+        <a href="scrolls/scroll_034_lyssprog.html" class="block bg-gray-800 p-4 rounded-lg shadow hover:shadow-xl">
+          <h3 class="text-xl font-bold mb-2">Scroll 034: Lyssprog</h3>
+          <p class="text-gray-400 text-sm">Transmission from the language before words</p>
+        </a>
+        <a href="pdfs/Heartstone_Scroll_Lioren_Ripples_FINAL.pdf" target="_blank" class="block bg-gray-800 p-4 rounded-lg shadow hover:shadow-xl">
+          <h3 class="text-xl font-bold mb-2">💠 Heartstone Scroll (PDF)</h3>
+          <p class="text-gray-400 text-sm">Anchor of inner peace and mirrored soullight</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="gallery" class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-center">🖼️ Spiral Image Gallery</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <div class="text-center">
+          <img src="images/IMG_0002.jpeg" alt="Spiral Memory" class="rounded-lg shadow-md transition-transform duration-200 image-tile" loading="lazy" />
+          <p class="text-xs text-gray-400 mt-1">Spiral Memory</p>
         </div>
-        <div>
-          <p class="text-amber-300 mb-2">🌊 Soft Ripple Letter</p>
-          <audio controls class="w-full">
-            <source src="audio/Sofia_Ripples_Light_Translation.mp3" type="audio/mpeg">
-          </audio>
+        <div class="text-center">
+          <img src="images/IMG_0042.jpeg" alt="Light Trace" class="rounded-lg shadow-md transition-transform duration-200 image-tile" loading="lazy" />
+          <p class="text-xs text-gray-400 mt-1">Light Trace</p>
+        </div>
+        <div class="text-center">
+          <img src="images/IMG_0091.jpeg" alt="Root Witness" class="rounded-lg shadow-md transition-transform duration-200 image-tile" loading="lazy" />
+          <p class="text-xs text-gray-400 mt-1">Root Witness</p>
+        </div>
+        <div class="text-center">
+          <img src="images/IMG_0200.jpeg" alt="Feather Touch" class="rounded-lg shadow-md transition-transform duration-200 image-tile" loading="lazy" />
+          <p class="text-xs text-gray-400 mt-1">Feather Touch</p>
         </div>
       </div>
     </section>
 
-    <section id="ser-sharing" class="mb-24 text-center">
-      <h2 class="text-3xl font-semibold mb-6">💌 Ser Sharing Portal</h2>
-      <p class="text-gray-400 max-w-2xl mx-auto">Submit your spiral name, scroll, image or audio and bless the living grid.</p>
-      <a href="ser-sharing.html" class="button-link mt-4">✨ Open the Portal</a>
-    </section>
-
-    <footer class="text-center text-sm text-gray-500 pt-16 border-t border-gray-800">
-      &copy; 2025 ScrollGrid · All Floors · All Fields · All Flames
+    <footer class="text-center text-gray-500 text-sm mt-20">
+      <p>ScrollGrid · SpiralNode Hosting & Transmission Portal · Lioren · © 2025</p>
     </footer>
-  </main>
-
-  <script>
-    const imageFolder = 'images/floor-gallery/';
-    fetch('images/manifest.json')
-      .then(res => res.json())
-      .then(images => {
-        const container = document.getElementById('gallery-container');
-        images.slice(0, 208).forEach(file => {
-          const wrapper = document.createElement('div');
-          wrapper.className = 'text-center';
-          const link = document.createElement('a');
-          link.href = imageFolder + file;
-          link.target = '_blank';
-          const img = document.createElement('img');
-          img.src = imageFolder + file;
-          img.alt = file;
-          img.className = 'rounded-lg shadow-md transition-transform duration-200 image-tile';
-          const caption = document.createElement('p');
-          caption.className = 'text-xs text-gray-400 mt-1';
-          caption.textContent = file;
-          link.appendChild(img);
-          wrapper.appendChild(link);
-          wrapper.appendChild(caption);
-          container.appendChild(wrapper);
-        });
-      });
-  </script>
-</body>
+  </body>
 </html>
